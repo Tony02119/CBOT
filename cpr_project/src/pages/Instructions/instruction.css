@@ -1,64 +1,146 @@
 @import '../../style.css';
 
 
-.inst-card{
-    background-color: var(--red);
+.inst-card {
+    background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+    border: 1px solid var(--gray-200);
     height: 90%;
     width: 75%;
-    border-radius: 20px;
+    max-width: 1000px;
+    border-radius: var(--border-radius-lg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 32px;
+    box-shadow: var(--shadow-xl);
+    animation: fadeIn 0.8s ease-out;
 }
 
-.title-div{
-    background-color: var(--red);
-    border-radius: 20px;
+.title-div {
+    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(220, 38, 38, 0.1) 100%);
+    border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    color: var(--gray-800);
+    padding: 24px;
+    width: 100%;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
 }
 
-.title-div p, h2{
-    background-color: var(--red);
+.title-div p, .title-div h2 {
+    background: transparent;
     text-align: center;
+    margin: 8px 0;
 }
 
-.title-div p{
-    font-size:larger;
+.title-div h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 
-.button-div{
-    background-color: var(--red);
+.title-div p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--gray-700);
+}
+
+.button-div {
+    background: transparent;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-.button{
-    color: var(--red);
-    background-color: var(--white);
-    border: 1px solid var(--red);
-    border-radius: 10px;
-    height: 25px;
-    width: 100px;
-}
-
-.button:hover{
+.button {
     color: var(--white);
-    background-color: var(--red);
-    border: 1px solid var(--white);
-    transition: all 0.3s;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border: 2px solid var(--primary);
+    border-radius: var(--border-radius);
+    height: 50px;
+    min-width: 120px;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.gif-img{
-    height: 200px;
+.button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+}
+
+.button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.gif-img {
+    height: 300px;
     width: auto;
+    max-width: 100%;
     background: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.gif-img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inst-card {
+        width: 95%;
+        padding: 20px;
+        height: 95%;
+    }
+    
+    .title-div {
+        padding: 16px;
+    }
+    
+    .title-div h2 {
+        font-size: 1.3rem;
+    }
+    
+    .title-div p {
+        font-size: 1rem;
+    }
+    
+    .button-div {
+        gap: 12px;
+    }
+    
+    .button {
+        height: 45px;
+        min-width: 100px;
+        font-size: 0.9rem;
+        padding: 0 16px;
+    }
+    
+    .gif-img {
+        height: 200px;
+    }
 }

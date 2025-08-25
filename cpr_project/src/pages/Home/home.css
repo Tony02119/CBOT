@@ -1,80 +1,172 @@
 @import '../../style.css';
 
-.box{
+.box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80vh;
+    padding: 20px;
+    animation: fadeIn 0.8s ease-out;
 }
 
-.upper-div{
+.upper-div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 70%;
     width: 90%;
+    gap: 24px;
+    max-width: 1200px;
 }
 
-.card{
-    background-color: var(--red);
+.card {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     height: 100%;
-    width: 40%;
-    border-radius: 20px;
+    width: 45%;
+    border-radius: var(--border-radius-lg);
     color: var(--white);
     font-weight: bold;
-    font-size: large;
+    font-size: 1.2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: var(--transition);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
 }
 
-.card:hover{
-    font-size: x-large;
-    
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    opacity: 0;
+    transition: var(--transition);
 }
 
-.card div{
-    background-color: var(--red);
-    
-}
-.card p{
-    background-color: var(--red);
+.card:hover::before {
+    opacity: 1;
 }
 
-.lower-div{
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+    font-size: 1.3rem;
+}
+
+.card div {
+    background: transparent;
+    z-index: 2;
+    position: relative;
+    padding: 20px;
+}
+
+.card p {
+    background: transparent;
+    margin: 8px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.lower-div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 25%;
     width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
 }
 
-.chatbot-card{
-    background-color: var(--red);
-    width: 90%;
+.chatbot-card {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    width: 100%;
     height: 60%;
-    border-radius: 20px;
+    border-radius: var(--border-radius-lg);
     color: var(--white);
     font-weight: bold;
-    font-size: large;
+    font-size: 1.3rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: var(--transition);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
 }
 
-.chatbot-card:hover{
-    font-size: x-large;
+.chatbot-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    opacity: 0;
+    transition: var(--transition);
 }
 
-.chatbot-card div{
-    background-color: var(--red);
+.chatbot-card:hover::before {
+    opacity: 1;
+}
+
+.chatbot-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-xl);
+    font-size: 1.4rem;
+}
+
+.chatbot-card div {
+    background: transparent;
+    z-index: 2;
+    position: relative;
+    padding: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .upper-div {
+        flex-direction: column;
+        gap: 16px;
+        height: auto;
+    }
+    
+    .card {
+        width: 100%;
+        min-height: 200px;
+        font-size: 1.1rem;
+    }
+    
+    .card:hover {
+        font-size: 1.2rem;
+    }
+    
+    .chatbot-card {
+        font-size: 1.2rem;
+        min-height: 100px;
+    }
+    
+    .chatbot-card:hover {
+        font-size: 1.3rem;
+    }
+    
+    .box {
+        height: auto;
+        min-height: 80vh;
+        padding: 16px;
+    }
 }
