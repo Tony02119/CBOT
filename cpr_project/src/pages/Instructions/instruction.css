@@ -1,0 +1,64 @@
+@import '../../style.css';
+
+
+.inst-card{
+    background-color: var(--red);
+    height: 90%;
+    width: 75%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.title-div{
+    background-color: var(--red);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.title-div p, h2{
+    background-color: var(--red);
+    text-align: center;
+}
+
+.title-div p{
+    font-size:larger;
+}
+
+.button-div{
+    background-color: var(--red);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.button{
+    color: var(--red);
+    background-color: var(--white);
+    border: 1px solid var(--red);
+    border-radius: 10px;
+    height: 25px;
+    width: 100px;
+}
+
+.button:hover{
+    color: var(--white);
+    background-color: var(--red);
+    border: 1px solid var(--white);
+    transition: all 0.3s;
+}
+
+.gif-img{
+    height: 200px;
+    width: auto;
+    background: none;
+}

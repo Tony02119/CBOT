@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+- rule: Greet the user after a greet message
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Explain what the bot can do
+  steps:
+  - intent: what_can_do
+  - action: utter_greet
+
+- rule: Respond to thanks
+  steps:
+  - intent: thank_you
+  - action: utter_thank_back

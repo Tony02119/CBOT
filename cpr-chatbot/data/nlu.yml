@@ -1,0 +1,472 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hello!
+    - Hey!
+    - Good morning!
+    - How are you doing ?
+    - Hello
+    - Hey
+
+- intent: thank_you
+  examples: |
+    - thank you so much
+    - thanks a lot
+    - many thanks
+    - I appreciate it
+    - thanks for everything
+    - I really appreciate your help
+    - you’re the best, thanks
+    - thanks for your assistance
+    - I’m grateful, thank you
+    - thanks, that was helpful
+    - thank you, I needed that
+    - thanks for the support
+    - you’ve been very helpful, thanks
+    - I owe you one, thanks
+    - cheers, mate
+    - thank you, I couldn’t have done it without you
+    - thanks for your time
+    - I appreciate your help, thank you
+    - you’ve been a great help, thanks
+    - thanks a bunch
+    - thanks, you’re awesome
+    - you’ve helped me a lot, thank you
+    - thanks, that means a lot
+    - thank you for your guidance
+    - you’re amazing, thanks
+    - much appreciated
+    - thank you, that was exactly what I needed
+    - thanks, I’m grateful
+    - thank you kindly
+    - you’re a lifesaver, thanks
+
+- intent: what_can_do
+  examples: |
+    - What are your capabilities?
+    - What services do you offer?
+    - How can you help me?
+    - What tasks can you perform?
+    - What can you help me with?
+    - What kind of assistance can you provide?
+    - Tell me what you can do
+    - What are you here for?
+    - How can you assist me?
+    - What can you help me solve?
+    - What is your purpose?
+    - How can you be useful to me?
+    - What’s your function?
+    - What problems can you solve?
+    - What support can you give me?
+    - Can you tell me what you’re capable of?
+    - What skills do you have?
+    - How can you be of service?
+    - What can I ask you to do?
+    - What features do you have?
+    - What can you offer?
+    - What’s your specialty?
+    - How can you make my life easier?
+    - What kind of help can I expect from you?
+    - What solutions can you provide?
+    - What’s your main function?
+    - How can you assist me today?
+    - What do you do?
+    - What’s your main job?
+    - What are you programmed to do?
+  
+- intent: what_is_cardiac_arrest
+  examples: |
+    - What is a cardiac arrest?
+    - What is cardiac arrest?
+    - Can you explain what cardiac arrest is?
+    - What happens during a cardiac arrest?
+    - Define cardiac arrest
+    - What does cardiac arrest mean?
+    - What occurs in a cardiac arrest?
+    - How does cardiac arrest happen?
+    - What is the definition of cardiac arrest?
+    - What are the symptoms of cardiac arrest?
+    - How would you describe cardiac arrest?
+    - What causes cardiac arrest?
+    - What is the medical term for cardiac arrest?
+    - What is the difference between a heart attack and cardiac arrest?
+    - What is the meaning of cardiac arrest?
+    - What leads to cardiac arrest?
+    - What are the signs of cardiac arrest?
+    - How does cardiac arrest affect the body?
+    - What happens to the heart during cardiac arrest?
+    - What is the impact of cardiac arrest?
+    - How serious is a cardiac arrest?
+    - What is a cardiac arrest and how does it occur?
+    - Why does cardiac arrest happen?
+    - Can you define cardiac arrest?
+    - What is the main cause of cardiac arrest?
+    - What is sudden cardiac arrest?
+    - What happens if someone has a cardiac arrest?
+    - What does it mean to have a cardiac arrest?
+    - What exactly is cardiac arrest?
+    - How does cardiac arrest differ from a heart attack?
+    - What are the consequences of cardiac arrest?
+
+- intent: symptoms
+  examples: |
+    - What are the symptoms
+    - Symptoms
+    - What symptoms
+    - How to detect heart problems
+    - How to know if heart problems
+    - What problems for heart disease
+    - Symptoms for heart disease
+    - Symptoms for cardial arrest
+    - Cardiac arrest symptoms
+    - Signs of cardiac arrest
+    - Symptoms of cardiac arrest
+    - Cardiac arrest signs
+    - Recognize cardiac arrest
+    - Identify cardiac arrest
+    - Cardiac arrest indicators
+    - What is cardiac arrest
+    - Cardiac arrest warning signs
+    - Symptoms of heart arrest
+    - What are the symptoms of cardiac arrest
+    - Can you tell me the signs of cardiac arrest
+    - How do I know if someone is having a cardiac arrest
+    - What symptoms should I look for in a cardiac arrest
+    - What happens when someone has a cardiac arrest
+    - How can I recognize cardiac arrest symptoms
+    - What are the warning signs of cardiac arrest
+    - How do I identify a cardiac arrest
+    - Could you list the symptoms of a cardiac arrest
+    - What does cardiac arrest look like
+    - What signs indicate cardiac arrest
+    - What should I watch out for in a cardiac arrest
+    - How can I tell if it's a cardiac arrest
+    - What are the early symptoms of a cardiac arrest
+    - Can you describe the symptoms of a cardiac arrest
+
+- intent: how_to_react
+  examples: |
+    - What to do
+    - What is the procedure
+    - Save someone from heart problem
+    - Save someone from cardial arrest
+    - How to help someone from cardial arrest
+    - How to help someone from heart problems
+    - What is the procedure to follow
+    - What should I do
+    - Cardiac arrest help
+    - What to do
+    - Cardiac arrest steps
+    - Help for cardiac arrest
+    - Actions for cardiac arrest
+    - Respond to cardiac arrest
+    - Cardiac arrest first aid
+    - How to assist
+    - Cardiac arrest response
+    - Cardiac arrest procedures
+    - What should I do if someone has a cardiac arrest
+    - How do I help someone having a cardiac arrest
+    - What actions should I take during a cardiac arrest
+    - What steps are needed for cardiac arrest
+    - What is the first aid for cardiac arrest
+    - How can I assist someone in cardiac arrest
+    - What do I do during cardiac arrest
+    - What to do in case of cardiac arrest
+    - How to respond to cardiac arrest
+    - Actions to take for cardiac arrest
+    - What are the procedures for cardiac arrest
+    - How to act in a cardiac arrest situation
+    - What should be done during cardiac arrest
+    - How to handle cardiac arrest
+    - What measures to take for cardiac arrest
+
+- intent: what_are_emergency_numbers
+  examples: |
+    - emergency services phone number
+    - phone number emergency services
+    - phone number help
+    - call emergency services
+    - what is phone number emergency services
+    - what is emergency services phone number
+    - What is the phone number of the emergency services
+    - How do I call the emergency services
+    - Help phone number
+    - Contact emergency services
+    - Emergency call number
+    - Emergency services hotline
+    - Number for help
+    - Emergency hotline
+    - Call for emergency help
+    - Emergency services contact
+    - What’s the emergency number?
+    - How to reach emergency services?
+    - Help number
+    - Need emergency services number
+    - Emergency phone
+    - Who to call in an emergency?
+    - Emergency contact number
+    - Emergency services phone
+    - Phone emergency services
+    - How to call for emergency?
+    - Emergency number, please
+    - What number to call for emergency?
+    - Who to contact for emergency help?
+    - How to get emergency services?
+    - Phone number for urgent help
+    - Emergency contact
+    - Number for urgent services
+    - What’s the number for emergencies?
+    - How to dial emergency services?
+    - Contact number for emergency
+
+- intent: abroad_emergency_numbers
+  examples: |
+    - Emergency numbers abroad
+    - Help numbers overseas
+    - Emergency contact numbers in foreign country
+    - Abroad emergency contact
+    - Emergency services numbers internationally
+    - Phone numbers for emergency abroad
+    - How to call emergency services abroad?
+    - International emergency numbers
+    - Contact emergency services overseas
+    - Emergency phone numbers in other countries
+    - What are the emergency numbers abroad?
+    - Emergency help overseas
+    - Phone numbers for emergencies in foreign countries
+    - International help numbers
+    - How to reach emergency services in another country?
+    - Need emergency numbers abroad
+    - How to find emergency contacts overseas?
+    - Emergency hotline in foreign country
+    - Emergency services contact numbers internationally
+    - Numbers to call for help abroad
+    - What is the emergency number in [country]?
+    - How to get emergency help overseas?
+    - Who to contact for emergencies abroad?
+    - Need help numbers for foreign country
+    - Emergency contact info abroad
+    - Phone numbers for emergency assistance abroad
+    - Urgent help numbers in other countries
+    - International emergency contacts
+    - How to dial emergency services in another country?
+    - Emergency numbers when traveling
+
+- intent: what_is_cpr
+  examples: |
+    - What is CPR
+    - Can you explain what CPR is
+    - What does CPR stand for
+    - What is the purpose of CPR
+    - Define CPR
+    - How does CPR work
+    - What exactly is CPR
+    - What does CPR mean
+    - What is the full form of CPR
+    - What is involved in CPR
+    - What is CPR used for
+    - Can you describe CPR
+    - What does CPR do
+    - How would you define CPR
+    - What is the goal of CPR
+    - What is the role of CPR in an emergency
+    - Why is CPR performed?
+    - What are the basics of CPR?
+    - What is CPR in first aid?
+    - What happens during CPR?
+    - What is CPR in medical terms?
+    - What is the meaning of CPR?
+    - How would you explain CPR to someone?
+    - What is the significance of CPR?
+    - What are the steps in CPR?
+    - Why do people use CPR?
+    - What is the definition of CPR?
+    - What does performing CPR involve?
+    - What are the components of CPR?
+    - What is CPR and how does it help?
+
+- intent: how_to_cpr
+  examples: |
+    - How to perform CPR?
+    - Steps for CPR
+    - How to do chest compressions?
+    - What is the process for CPR?
+    - How do you do CPR?
+    - Guide to performing CPR
+    - How to give CPR?
+    - Instructions for CPR
+    - How to administer CPR?
+    - What is the correct way to do CPR?
+    - CPR procedure
+    - How to do CPR correctly?
+    - How can I perform CPR?
+    - How to start CPR?
+    - What are the CPR techniques?
+    - Steps to do CPR
+    - How to conduct CPR?
+    - How to save someone with CPR?
+    - CPR steps and techniques
+    - How should I do CPR?
+    - How to execute CPR?
+    - What to do for CPR?
+    - How to give chest compressions?
+    - Procedure for CPR
+    - How to handle CPR?
+    - Best way to do CPR
+    - How to perform chest compressions?
+    - Method for doing CPR
+    - What are the CPR procedures?
+    - How to help someone with CPR?
+    - How long do I have to do CPR?
+    - How long should CPR be performed?
+    - When should I stop doing CPR?
+    - How many minutes should I perform CPR?
+    - How long is CPR done for?
+    - How long to continue CPR?
+  
+- intent: how_to_mouth_to_mouth
+  examples: |
+    - How do I perform mouth-to-mouth?
+    - Steps for mouth-to-mouth resuscitation
+    - How to do mouth-to-mouth?
+    - How to give mouth-to-mouth?
+    - What is the technique for mouth-to-mouth?
+    - How to perform mouth-to-mouth resuscitation?
+    - Can you explain how to do mouth-to-mouth?
+    - Instructions for mouth-to-mouth
+    - How should I do mouth-to-mouth?
+    - How is mouth-to-mouth done?
+    - What are the steps for mouth-to-mouth resuscitation?
+    - Guide to mouth-to-mouth resuscitation
+    - How to give effective mouth-to-mouth?
+    - Proper way to do mouth-to-mouth
+    - How can I perform mouth-to-mouth correctly?
+    - What is the procedure for mouth-to-mouth?
+    - Can you guide me through mouth-to-mouth?
+    - How do you give mouth-to-mouth resuscitation?
+    - Best way to perform mouth-to-mouth
+    - What is the correct method for mouth-to-mouth?
+    - How to provide mouth-to-mouth in an emergency?
+    - What are the steps to give mouth-to-mouth?
+    - How to safely perform mouth-to-mouth?
+    - What is the mouth-to-mouth technique?
+    - Detailed steps for mouth-to-mouth resuscitation
+    - How to execute mouth-to-mouth resuscitation?
+    - What is the safest way to perform mouth-to-mouth?
+    - How do I ensure proper mouth-to-mouth technique?
+    - What should I know before performing mouth-to-mouth?
+    - How to do mouth-to-mouth in a CPR situation?
+
+- intent: what_is_defibrillator
+  examples: |
+    - What is a defibrillator?
+    - Can you explain what a defibrillator is?
+    - What does a defibrillator do?
+    - How does a defibrillator work?
+    - What is the purpose of a defibrillator?
+    - Define defibrillator
+    - What exactly is a defibrillator?
+    - What is the function of a defibrillator?
+    - What is an AED defibrillator?
+    - What does a defibrillator look like?
+    - How would you describe a defibrillator?
+    - What is the role of a defibrillator in an emergency?
+    - What is the use of a defibrillator?
+    - What is the definition of a defibrillator?
+    - What does a defibrillator do in a cardiac arrest?
+    - Can you describe a defibrillator?
+    - What is the meaning of a defibrillator?
+    - How would you define a defibrillator?
+    - What is the purpose of using a defibrillator?
+    - What type of device is a defibrillator?
+    - What is the principle behind a defibrillator?
+    - How does an AED defibrillator differ from others?
+    - What are defibrillators used for?
+    - What is a defibrillator and how does it work?
+    - What does a defibrillator device do?
+    - What is a defibrillator used for in medical emergencies?
+    - What are the key features of a defibrillator?
+    - What is the concept of a defibrillator?
+    - Why do we use defibrillators?
+    - What does an automated defibrillator do?
+
+- intent: how_to_defibrillator
+  examples: |
+    - How do I use a defibrillator?
+    - Steps to use a defibrillator
+    - How to operate a defibrillator?
+    - What is the procedure for using a defibrillator?
+    - Can you explain how to use a defibrillator?
+    - How do you use a defibrillator in an emergency?
+    - Instructions for using a defibrillator
+    - How does a defibrillator work?
+    - What are the steps to use a defibrillator?
+    - How to correctly use a defibrillator?
+    - What should I do when using a defibrillator?
+    - How do I handle a defibrillator?
+    - How to use an AED defibrillator?
+    - What is the correct way to use a defibrillator?
+    - Can you guide me on how to use a defibrillator?
+    - How to use a defibrillator machine?
+    - What are the steps for using an AED?
+    - How do I safely use a defibrillator?
+    - How to apply a defibrillator on a patient?
+    - What is the method for using a defibrillator?
+    - How to operate an automated defibrillator?
+    - Can you teach me how to use a defibrillator?
+    - How do you perform defibrillation with a device?
+    - What are the guidelines for using a defibrillator?
+    - What are the key steps to operate a defibrillator?
+    - How to use a defibrillator on someone who collapsed?
+    - How does an AED defibrillator work?
+    - What are the basics of using a defibrillator?
+    - How to use a defibrillator in a cardiac arrest situation?
+    - What are the instructions for using a defibrillator effectively?
+
+- intent: what_are_pros_cpr
+  examples: |
+    - Benefits of doing CPR
+    - Why should I do CPR?
+    - Advantages of CPR
+    - Is CPR beneficial?
+    - Does CPR make a difference?
+    - What are the benefits of performing CPR?
+    - Positive effects of CPR
+    - How does CPR help?
+    - Why is CPR important?
+    - Is CPR effective?
+    - Does CPR improve survival rates?
+    - What are the good points of CPR?
+    - How can CPR save lives?
+    - Benefits of knowing CPR
+    - Why learn CPR?
+    - What are the positives of doing CPR?
+    - Does CPR really work?
+    - How effective is CPR?
+    - Why is CPR useful?
+    - What are the key benefits of CPR?
+    - How does CPR benefit the patient?
+    - Why perform CPR?
+    - Positive impacts of CPR
+    - Why is it good to know CPR?
+    - How does CPR increase survival?
+    - What are the pros of learning CPR?
+    - Is learning CPR worth it?
+    - Benefits of CPR in emergencies
+    - Why is CPR advantageous?
+    - Does CPR help in emergencies?

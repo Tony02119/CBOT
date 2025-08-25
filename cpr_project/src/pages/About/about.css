@@ -1,0 +1,29 @@
+.about{
+    justify-content: center;
+}
+
+.about-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    height: 80%;
+    width: 75%;
+    border-radius: 20px;
+}
+.about-title{
+    background-color: var(--red);
+    color: var(--white);
+}
+.about-text{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .about-div {
+      font-size: small;
+    }
+  
+  }

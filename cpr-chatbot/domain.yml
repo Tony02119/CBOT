@@ -1,0 +1,124 @@
+version: "3.1"
+
+intents:
+  - greet
+  - thank_you
+  - what_can_do
+  - what_is_cardiac_arrest
+  - symptoms
+  - how_to_react
+  - what_are_emergency_numbers
+  - abroad_emergency_numbers
+  - what_is_cpr
+  - how_to_cpr
+  - how_to_mouth_to_mouth
+  - what_is_defibrillator
+  - how_to_defibrillator
+  - what_are_pros_cpr
+
+responses:
+  utter_please_rephrase:
+  - text: "I'm sorry, I didn't quite understand that. Please ask questions related to CPR and first aid gestures during cardiac arrest."
+
+  utter_greet:
+  - text: "Hey! I'm a chatbot that can answer questions about CPR, how to do it, what are the benefits of doing it, etc."
+
+  utter_thank_back:
+  - text: "You're welcome! I'm glad I could help you!"
+
+  utter_explanation_cardiac_arrest:
+  - text: "Cardiac arrest is a sudden loss of heart function, causing the heart to stop beating effectively. 
+    This leads to a lack of blood flow to the brain and other vital organs, making it a life-threatening 
+    emergency that requires immediate medical intervention. Failing to get immediate medical intervention 
+    leads to first, irreparable brain damage and then to death."
+
+  utter_symptoms_description_one:
+  - text: "A cardiac arrest can sometimes be detected before it happens. 
+    The symptoms are : prolonged chest pain that can extend to the arms, a feeling of oppression,
+    thightness or even crushing."
+  
+  utter_symptoms_description_two:
+  - text: "Appart from these symptoms, a cardiac arrest can also be preceded by palpitations or general malaise.
+    Otherwise, a person victim of cardiac arrest will have the following symptoms :
+    the person will fall, lose consciousness, won't respond to any stimulations, when talking to them.
+    Its breathing will also be non-existent or very irregular."
+
+  utter_analyse_situation:
+  - text: "Start by checking your surrounding to see if you are alone or if anyone else is present around you.
+    If you are alone, start by calling the emergency services.
+    Otherwise, ask someone to call them instead and start performing CPR on the victim.
+    You can also ask anyone if there is a defibrillator and, if that is the case, ask them to bring immediatly."
+
+  utter_emergency_call_recs:
+  - text: "While calling the emergency services, you will be asked multiple questions by the operator. You need to answer clearly 
+    to help them understanding the situation so that they can send help quickly and tell you what to do.
+    Never end the call before the operator tells you to do it and describe all the symptoms that alerted you."
+
+  utter_emergency_numbers:
+  - text: "The emergency phone numbers depends on your country and continent. In the European Union, the 112 is available for 
+    any kind of emergency as the operator will help you and redirect you towards the right emergency services."
+  
+  utter_emergency_numbers_examples:
+  - text: "Otherwise, here are some phones numbers of some European countries :
+    - Germany: 110 for police and 112 globally
+    - France: 15 for the health emergency, 17 for the police, 18 for the firemen and 112 globally
+    - Spain: 112 globally
+    - Italy: 113 for police, 115 for fireman, 118 for sanitary services and 112 globally.
+    - Italy: 113 for police, 115 for fireman, 118 for sanitary services and 112 globally."
+
+  utter_know_foreign_emergency_numbers:
+  - text: "Before going abroad, it is highly recommended to check what are the locals emergency services and how to call them.
+    This will allow you to react quickly in case of an emergency, especially if you are alone.
+    Otherwise, in the European Union (and some other european countries), the 112 is the number to call if you have any doubt.
+    The operators from this number will help you and redirect you towards the right emergency services in your current country."
+
+  utter_cpr_explanation:
+  - text: "CPR, or Cardiopulmonary Resuscitation, is an emergency procedure used when the heart stops beating.
+  It involves chest compressions and sometimes rescue breaths to maintain blood flow and oxygen to the brain and heart until medical help arrives.
+  Its goal is to keep the person alive during cardiac arrest or other emergencies."
+
+  utter_cpr_steps:
+  - text: "Step 1: start by laying down the victim on a hard surface and kneel next to them.\n\n
+  Step 2: place your hands one on top of the other, in the middle of their chest, between their two breasts, with your arms straight and then press with all the weight of your body.\n\n
+  Step 3: apply strong pressure, pushing your hands 5 to 6 cm into the chest and raising them between each pressure.\n\n
+  Step 4: perform the pressures at a steady pace (100 pressures per minute), counting to 30. After every 30 pressures, stop to give mouth-to-mouth only if you know how to do so.\n\n
+  Step 5: continue until the defibrillator tells you to stop or until the emergency services arrive.\n\n"
+    buttons:
+    - title: "How to do mouth-to-mouth"
+      payload: "/how_to_mouth_to_mouth"
+    - title: "How to use a defibrillator"
+      payload: "/how_to_defibrillator"
+
+  utter_how_to_mouth_to_mouth:
+  - text: "A quick warning: mouth-to-mouth should only be performed when knowing the technic.\n\n
+  Step 1: tilt the victim's head back, lift their chin, put one hand on their forehead and pinch their nostrils between your thumb and index.\n\n
+  Step 2: with your other hand, hold their chin so that their mouth stays opened.\n\n
+  Step 3: inhale normally, lean towards the victim and cover their mouth completely with yours.\n\n
+  Step 4: breath in slowly and regularly air in their mouth while checking that their chest rise up.\n\n
+  Step 5: keep the victim's head and chin in position and rise little bit to check that their chest lowers during the expiration.\n\n
+  Repeat these steps a second time and then resume CPR."
+
+  utter_what_is_defibrillator:
+  - text: "A defibrillator is a device that vocally guides you to restart the stopped heart of a cardiac arrest victim. 
+  It can be automated hence simplifying its use."
+    buttons:
+    - title: "How to use a defibrillator"
+      payload: "/how_to_defibrillator"
+
+  utter_how_to_defibrillator:
+  - text: "Turn on the defibrillator and read the instructions while someone else performs CPR.\n\n
+  Start by placing the electrodes on the skin of the victim and check that no one is touching them while the defibrillator analyses their heart rate.\n\n
+  If an electric shock must be delivered, ensure that everyone is standing far from the victim and its immediate environment.\n\n
+  Press the button if required, and it will deliver the electric shock by itself.\n\n
+  If the defibrillator asks you, perform CPR by series of 30 compression and two breaths if you know how to perform mouth-to-mouth.\n\n
+  Continue to follow the defibrillator's instruction until the victim regains normal breathing or the emergency services arrive.\n\n
+  If the victim's breathing goes back to normal and she wakes up, stop doing CPR BUT don't turn off the defibrillator and keep the electrodes on the victim.\n\n
+  If the victims stay unsconcious after regaining normal breathing, put them in lateral position of safety and wait for the emergency services."
+
+  utter_pros_cpr:
+  - text: "Performing CPR greatly increase the chances of survival of the victim and reduce the potential after-effects.\n\n
+  The first irreversible brain damages appear after 5 minutes without oxygen, hence the importance of starting the CPR as soon as possible."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

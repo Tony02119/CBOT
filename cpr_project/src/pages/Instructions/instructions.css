@@ -1,0 +1,54 @@
+@import '../../style.css';
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.upper-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+    width: 90%;
+}
+
+.card{
+    background-color: var(--red);
+    height: 100%;
+    width: 40%;
+    border-radius: 20px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.card:hover{
+    font-size: x-large;
+}
+
+.card div{
+    background-color: var(--red);
+}
+.card p{
+    background-color: var(--red);
+}
+
+.lower-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 25%;
+    width: 90%;
+}

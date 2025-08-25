@@ -1,0 +1,100 @@
+@import '../../style.css';
+
+.start-button {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: var(--white);
+    background: var(--red);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.start-button:hover{
+    background-color: var(--white);
+    color: var(--red);
+    border: 1px solid var(--red);
+    
+}
+
+.quiz-card{
+    background-color: var(--red);
+    height: 90%;
+    width: 75%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.question-div{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--red);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-div{
+    background: var(--red);
+}
+
+.info-div h3{
+    background-color: var(--red);
+}
+
+.options-div{
+    background-color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    
+}
+
+.option-button{
+    width: 220px;
+    height: 50px;
+    border: none;
+    background: var(--white);
+    border: 1px solid var(--white);
+    color: var(--red);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    
+}
+
+.option-button:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 var(--dark-red), 0 17px 50px 0 var(--dark-red);
+    transition: all 0.3s;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .options-div {
+      flex-direction: column;
+    }
+  
+  }
+
+.score-div{
+    background-color: var(--red);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

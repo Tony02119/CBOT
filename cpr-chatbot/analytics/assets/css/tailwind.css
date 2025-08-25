@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+@layer base {
+  .link {
+    @apply p-1 md:p-2 flex items-center text-lg text-gray-800 hover:text-primary-600 rounded-lg focus:outline-none focus:text-primary-600;
+  }
+
+  .link-active {
+    @apply p-1 md:p-2 flex items-center text-lg text-primary-600 rounded-lg focus:outline-none;
+  }
+
+  .button {
+    @apply py-3 px-4 inline-flex items-center gap-x-2 w-fit text-sm font-medium rounded-lg border border-transparent bg-primary-500 text-white hover:bg-primary-600 focus:outline-none active:bg-primary-700 disabled:opacity-50 disabled:pointer-events-none;
+  }
+}

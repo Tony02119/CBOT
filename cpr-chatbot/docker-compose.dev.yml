@@ -1,0 +1,39 @@
+services:
+  rasa:
+    container_name: crp_chatbot
+    image: rasa/rasa:3.6.20-full
+    volumes:
+      - ./:/app
+    command:
+      - run
+      - --enable-api
+      - --cors
+      - "http://localhost:3000,http://localhost:8080,https://cpr-chatbot.nightingale.uni-mainz.de"
+    ports:
+      - "5005:5005"
+  
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    env_file:
+      - ./docker/postgres/.env
+    ports:
+      - "5055:5432"
+    volumes:
+      - ./docker/postgres:/docker-entrypoint-initdb.d
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  analytics:
+    container_name: analytics
+    build: ./analytics
+    env_file:
+      - ./docker/analytics/.env
+      - ./docker/postgres/.env
+    ports:
+      - "5005:3000"
