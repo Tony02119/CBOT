@@ -4,60 +4,42 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  animation: fadeIn 0.3s ease-out;
 }
 
 .popup-container {
   background: var(--white);
-  padding: 40px 48px;
-  border-radius: var(--border-radius-lg);
-  max-width: 650px;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  max-width: 600px;
   width: 90%;
   text-align: center;
-  box-shadow: var(--shadow-xl);
-  border: 1px solid var(--gray-200);
-  animation: slideIn 0.4s ease-out;
-  position: relative;
-}
-
-.popup-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
 }
 
 .popup-title {
-  font-size: 1.8rem;
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 24px;
-  background: transparent;
-  color: var(--gray-800);
+  color: var(--text-dark);
 }
 
 .popup-text {
-  font-size: 1.1rem;
+  font-size: 16px;
   margin: 16px 0;
-  color: var(--gray-700);
+  color: var(--text-dark);
   line-height: 1.6;
-  background: transparent;
   text-align: left;
 }
 
 .highlight {
-  color: var(--primary);
+  color: var(--primary-red);
   font-weight: 600;
-  background: transparent;
 }
 
 .checkbox-container {
@@ -65,84 +47,61 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin: 32px auto 24px;
-  flex-wrap: wrap;
-  background: transparent;
+  margin: 32px 0 24px;
   padding: 16px;
-  border-radius: var(--border-radius);
-  background: var(--gray-50);
-  border: 1px solid var(--gray-200);
+  background: #F9FAFB;
+  border-radius: 8px;
+  border: 1px solid var(--border);
 }
 
 .checkbox-container input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  accent-color: var(--primary);
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-red);
   cursor: pointer;
-  transition: var(--transition);
-}
-
-.checkbox-container input[type="checkbox"]:hover {
-  transform: scale(1.1);
 }
 
 .checkbox-container label {
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 16px;
   cursor: pointer;
-  color: var(--gray-700);
-  background: transparent;
+  color: var(--text-dark);
   font-weight: 500;
-  transition: var(--transition);
-}
-
-.checkbox-container label:hover {
-  color: var(--primary);
 }
 
 .confirm-button {
-  margin-top: 16px;
-  padding: 14px 32px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: var(--primary-red);
   color: var(--white);
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
   font-weight: 600;
-  font-size: 1rem;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: var(--shadow-md);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   min-width: 160px;
 }
 
 .confirm-button:hover:not(:disabled) {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  background: #B91C1C;
 }
 
 .confirm-button:disabled {
-  background: var(--gray-300);
+  background: #D1D5DB;
   cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .popup-container {
-    padding: 24px 32px;
+    padding: 24px;
     width: 95%;
   }
   
   .popup-title {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   
   .popup-text {
-    font-size: 1rem;
+    font-size: 15px;
   }
   
   .checkbox-container {
@@ -153,6 +112,6 @@
   
   .confirm-button {
     padding: 12px 24px;
-    font-size: 0.9rem;
+    font-size: 15px;
   }
 }
