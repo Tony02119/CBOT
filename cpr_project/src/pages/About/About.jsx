@@ -6,16 +6,44 @@ const About = () => {
     <div className='about-container'>
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-content">
-          <div className="hero-badge">
-            <span className="badge-icon">❤️</span>
-            <span className="badge-text">Saving Lives Through Education</span>
-          </div>
-          <h1 className="hero-title">About LifeSaver Project</h1>
+      <div className="hero-section">
+        <div className="hero-background">
+          <h1 className="hero-title">
+            About <span className="title-highlight">LifeSaver</span> Project
+          </h1>
           <p className="hero-subtitle">
             Empowering everyone with life-saving knowledge through interactive learning, 
             AI-powered assistance, and comprehensive first aid education.
           </p>
+          <div className="hero-cta">
+            <a href="/quiz" className="hero-button primary">Start Learning</a>
+            <a href="/chatbot" className="hero-button secondary">Ask AI Assistant</a>
+          </div>
+        </div>
+          </div>
+        </div>
+        <div className="hero-content">
+          <div className="hero-badge">
+            <span className="badge-icon">🚑</span>
+          <div className="section-icon mission-icon">🎯</div>
+            <span className="badge-text">Saving Lives Through Education</span>
+          <div className="section-line"></div>
+          </div>
+          <div className="hero-badge">
+          <div className="mission-card">
+            <div className="mission-highlight">
+              <span className="highlight-number">5</span>
+              <span className="highlight-text">minutes until brain damage</span>
+            </div>
+            <p className="mission-text">
+              Cardiac arrest affects millions globally, with survival rates heavily dependent on immediate CPR intervention. 
+              Studies show that brain damage begins after just 5 minutes without oxygen, yet many people lack proper CPR knowledge.
+            </p>
+            <p className="mission-text">
+              <strong className="project-name">LifeSaver Project</strong> bridges this critical gap by providing accessible, interactive, and comprehensive 
+              first aid education that can literally save lives in emergency situations.
+            </p>
+          </div>
         </div>
         <div className="hero-stats">
           <div className="stat-item">
@@ -27,24 +55,35 @@ const About = () => {
             <div className="stat-label">Survival increase per minute</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">100%</div>
+      <div className="section-container impact-section">
             <div className="stat-label">Free education</div>
+          <div className="section-icon impact-icon">💝</div>
           </div>
+          <div className="section-line"></div>
         </div>
       </section>
 
       {/* Mission Section */}
+              <div className="impact-icon-bg">🌐</div>
       <section className="content-section">
         <div className="section-container">
           <div className="section-header">
             <div className="section-icon mission-icon">🎯</div>
             <h2 className="section-title">Our Mission</h2>
+              <div className="impact-icon-bg">🔒</div>
           </div>
           <div className="mission-content">
             <p className="mission-text">
               Cardiac arrest affects millions globally, with survival rates heavily dependent on immediate CPR intervention. 
+            <div className="impact-item">
+              <div className="impact-icon-bg">🎓</div>
+              <div className="impact-number">∞</div>
+              <div className="impact-label">Learning Opportunities</div>
+              <div className="impact-description">Unlimited access</div>
+            </div>
               Studies show that brain damage begins after just 5 minutes without oxygen, yet many people lack proper CPR knowledge.
             </p>
+            <div className="message-icon">💡</div>
             <p className="mission-text">
               <strong>LifeSaver Project</strong> bridges this critical gap by providing accessible, interactive, and comprehensive 
               first aid education that can literally save lives in emergency situations.
@@ -164,22 +203,36 @@ const About = () => {
                 <div className="impact-number">100%</div>
                 <div className="impact-label">Privacy Protected</div>
                 <div className="impact-description">Anonymous learning</div>
-              </div>
+      <div className="section-container stats-section">
             </div>
+          <div className="section-icon stats-icon">📊</div>
             <div className="impact-message">
+          <div className="section-line"></div>
               <p>
                 Every minute counts in a cardiac emergency. Our platform ensures that when the moment comes, 
                 you'll have the knowledge and confidence to act decisively and save a life.
+            <div className="stat-icon">⏱️</div>
               </p>
+            </div>
+            <div className="stat-bar">
+              <div className="stat-fill" style={{width: '100%'}}></div>
             </div>
           </div>
         </div>
+            <div className="stat-icon">📈</div>
       </section>
 
+            <div className="stat-bar">
+              <div className="stat-fill" style={{width: '80%'}}></div>
+            </div>
       {/* Technology Section */}
       <section className="tech-section">
+            <div className="stat-icon">🆓</div>
         <div className="section-container">
           <div className="section-header">
+            <div className="stat-bar">
+              <div className="stat-fill" style={{width: '100%'}}></div>
+            </div>
             <div className="section-icon tech-icon">🔧</div>
             <h2 className="section-title">Technology Stack</h2>
           </div>
@@ -187,10 +240,15 @@ const About = () => {
             <div className="tech-category">
               <h3 className="tech-category-title">Frontend</h3>
               <div className="tech-items">
+          <div className="section-icon team-icon">👥</div>
                 <span className="tech-item">React.js 18.3.1</span>
+          <div className="section-line"></div>
                 <span className="tech-item">React Router</span>
                 <span className="tech-item">Axios</span>
               </div>
+            <div className="team-card-header">
+              <div className="team-badge">University</div>
+            </div>
             </div>
             <div className="tech-category">
               <h3 className="tech-category-title">Backend</h3>
@@ -205,12 +263,16 @@ const About = () => {
               <div className="tech-items">
                 <span className="tech-item">PostgreSQL</span>
                 <span className="tech-item">Docker</span>
-                <span className="tech-item">Analytics</span>
+                <span>Visit Research Group</span>
+                <span className="link-arrow">→</span>
               </div>
             </div>
             <div className="tech-category">
               <h3 className="tech-category-title">Deployment</h3>
               <div className="tech-items">
+            <div className="team-card-header">
+              <div className="team-badge funding">Funding</div>
+            </div>
                 <span className="tech-item">Docker Compose</span>
                 <span className="tech-item">Nginx</span>
                 <span className="tech-item">Multi-service</span>
@@ -225,13 +287,37 @@ const About = () => {
         <div className="cta-content">
           <h2 className="cta-title">Ready to Learn Life-Saving Skills?</h2>
           <p className="cta-description">
-            Join thousands of people who have already improved their emergency response knowledge.
+                <span>Learn More</span>
+                <span className="link-arrow">→</span>
           </p>
           <div className="cta-buttons">
             <a href="/quiz" className="cta-button primary">Take the Quiz</a>
             <a href="/instructions" className="cta-button secondary">Learn CPR</a>
           </div>
         </div>
+      {/* Call to Action */}
+      <div className="cta-section">
+        <div className="cta-background">
+          <div className="cta-pattern"></div>
+        </div>
+        <div className="cta-content">
+          <div className="cta-icon">🚀</div>
+          <h2 className="cta-title">Ready to Save Lives?</h2>
+          <p className="cta-description">
+            Join thousands who have already learned life-saving skills with our interactive platform.
+          </p>
+          <div className="cta-buttons">
+            <a href="/quiz" className="cta-button primary">
+              <span className="button-icon">🧠</span>
+              <span>Test Your Knowledge</span>
+            </a>
+            <a href="/instructions" className="cta-button secondary">
+              <span className="button-icon">📚</span>
+              <span>Learn CPR Steps</span>
+            </a>
+          </div>
+        </div>
+      </div>
       </section>
     </div>
   )
