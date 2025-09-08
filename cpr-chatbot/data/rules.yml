@@ -1,22 +1,27 @@
 version: "3.1"
 
 rules:
-- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+- rule: Say goodbye anytime the user says goodbye
   steps:
-  - intent: nlu_fallback
-  - action: utter_please_rephrase
+  - intent: goodbye
+  - action: utter_goodbye
 
-- rule: Greet the user after a greet message
+- rule: Say 'you're welcome' anytime the user says thank you
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- rule: Respond to greetings
   steps:
   - intent: greet
   - action: utter_greet
 
-- rule: Explain what the bot can do
+- rule: Explain capabilities when asked
   steps:
   - intent: what_can_do
-  - action: utter_greet
+  - action: utter_what_can_do
 
-- rule: Respond to thanks
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
   steps:
-  - intent: thank_you
-  - action: utter_thank_back
+  - intent: nlu_fallback
+  - action: utter_please_rephrase

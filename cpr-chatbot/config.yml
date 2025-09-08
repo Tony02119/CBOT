@@ -1,32 +1,13 @@
-# The config recipe.
-# https://rasa.com/docs/rasa/model-configuration/
+# Configuration Rasa pour le chatbot CPR
 recipe: default.v1
 
-# The assistant project unique identifier
-# This default value must be replaced with a unique assistant name within your deployment
-assistant_id: 20240703-120523-impulsive-contour
+# Identifiant unique de l'assistant
+assistant_id: cpr-lifesaver-2025
 
-# Configuration for Rasa NLU.
-# https://rasa.com/docs/rasa/nlu/components/
+# Langue du chatbot
 language: en
 
-
-# Configuration for Rasa Core.
-# https://rasa.com/docs/rasa/core/policies/
-policies: null
-# # No configuration for policies was provided. The following default policies were used to train your model.
-# # If you'd like to customize them, uncomment and adjust the policies.
-# # See https://rasa.com/docs/rasa/policies for more information.
-#   - name: MemoizationPolicy
-#   - name: RulePolicy
-#   - name: UnexpecTEDIntentPolicy
-#     max_history: 5
-#     epochs: 100
-#   - name: TEDPolicy
-#     max_history: 5
-#     epochs: 100
-#     constrain_similarities: true
-
+# Pipeline de traitement du langage naturel
 pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
@@ -34,8 +15,22 @@ pipeline:
   - name: CountVectorsFeaturizer
   - name: DIETClassifier
     epochs: 100
+    constrain_similarities: true
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.98
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+# Politiques de gestion des conversations
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true

@@ -1,9 +1,12 @@
+version: "3.8"
+
 services:
   rasa:
-    container_name: crp_chatbot
+    container_name: cpr_chatbot
     image: rasa/rasa:3.6.20-full
     volumes:
       - ./:/app
+    working_dir: /app
     command:
       - run
       - --enable-api
@@ -19,27 +22,51 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost:5005/"]
       interval: 30s
       timeout: 10s
-      retries: 3
+      retries: 5
+      start_period: 60s
+    environment:
+      - RASA_TELEMETRY_ENABLED=false
 
   db:
-    image: postgres
+    image: postgres:13
+    container_name: cpr_postgres
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
-    restart: always
-    shm_size: 128mb
-    env_file:
-      - ./docker/postgres/.env
+      POSTGRES_DB: cpr_chatbot
+      POSTGRES_USER: cpr_chatbot
+      POSTGRES_PASSWORD: cpr_password_2025
     volumes:
+      - postgres_data:/var/lib/postgresql/data
       - ./docker/postgres:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cpr_chatbot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   analytics:
-    container_name: analytics
-    build: ./analytics
-    env_file:
-      - ./docker/analytics/.env
-      - ./docker/postgres/.env
+    container_name: cpr_analytics
+    build: 
+      context: ./analytics
+      dockerfile: Dockerfile
     ports:
       - "5005:3000"
     depends_on:
       - rasa
       - db
+    restart: unless-stopped
+    environment:
+      - CHATBOT_API_URL=http://rasa:5005/webhooks/rest/webhook
+      - POSTGRES_DATABASE=cpr_chatbot
+      - POSTGRES_USER=cpr_chatbot
+      - POSTGRES_PASSWORD=cpr_password_2025
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+
+volumes:
+  postgres_data:
+
+networks:
+  default:
+    name: cpr_network
