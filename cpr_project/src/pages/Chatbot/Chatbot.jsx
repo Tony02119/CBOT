@@ -13,12 +13,12 @@ const Chatbot = () => {
 	const [chatMessages, setChatMessages] = useState([]);
 	const chatroomRef = useRef(null);
 	const initialMessageSent = useRef(false);
-	const DOMAIN = "http://localhost:5005"; //https://cpr-chatbot.nightingale.uni-mainz.de ou http://localhost:5005
-	const URL = "/api/ask_chatbot";
+	const DOMAIN = "http://localhost:5005"; // URL du service analytics qui proxy vers Rasa
+	const URL = "/webhooks/rest/webhook"; // Connexion directe à Rasa
 
 	const sendMessage = async (message) => {
 		setUserMessageCount(userMessageCount + 1);
-		const userMessage = { sender: "You", message, analytics: enableAnalytics, conv_position: userMessageCount };
+		const userMessage = { sender: "user", message }; // Format Rasa standard
 
 		try {
 			setChatMessages(prevMessages => [...prevMessages, { sender: "You", text: message }]);

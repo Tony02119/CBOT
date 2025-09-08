@@ -29,3 +29,6 @@ services:
       - ./docker/postgres/.env
     ports:
       - "5005:3000"
+    depends_on:
+      - rasa
+      - db
