@@ -13,8 +13,8 @@ const Chatbot = () => {
 	const [chatMessages, setChatMessages] = useState([]);
 	const chatroomRef = useRef(null);
 	const initialMessageSent = useRef(false);
-	const DOMAIN = "http://localhost:5005"; // URL du service analytics qui proxy vers Rasa
-	const URL = "/webhooks/rest/webhook"; // Connexion directe à Rasa
+	const DOMAIN = "http://localhost:5006"; // URL directe vers Rasa
+	const URL = "/webhooks/rest/webhook"; // Endpoint Rasa
 
 	const sendMessage = async (message) => {
 		setUserMessageCount(userMessageCount + 1);
