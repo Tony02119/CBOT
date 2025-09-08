@@ -1,3 +1,20 @@
+---
+title: "Fonctionnement Détaillé du Chatbot CPR"
+subtitle: "Guide Technique Complet"
+author: "Système d'IA Conversationnelle"
+date: "08/09/2025"
+geometry: margin=2cm
+fontsize: 11pt
+documentclass: article
+header-includes:
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyhead[L]{Chatbot CPR - Guide Technique}
+  - \fancyhead[R]{08/09/2025}
+---
+
+\newpage
+
 # 🤖 Fonctionnement Détaillé du Chatbot CPR
 
 ## 📋 **Vue d'ensemble du système**
