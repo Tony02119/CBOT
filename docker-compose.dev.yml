@@ -40,7 +40,7 @@
 
    analytics:
      container_name: analytics
-     build: ./analytics
+    image: cpr-chatbot-analytics
      env_file:
        - ./docker/analytics/.env
        - ./docker/postgres/.env
