@@ -21,7 +21,7 @@ They are accessible on the main page of the website `host:5005/` and display the
 
 
 ## Development
-**Disclaimer:** you python version needs to be one of the followings to develop the chatbot: `3.8`, `3.9`, `3.10`.  
+**Disclaimer:** you python version needs to be one of the followings to develop the chatbot: `3.8`, `3.9`, `3.10`, `3.11`, `3.12`, or `3.13`.  
 
 Use the `docker-compose.dev.yml` instead of the regular docker compose when developing.  
 It opens the database to develop the analytics website locally and start an `adminer` instance to easily check the database.  
