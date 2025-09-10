@@ -139,6 +139,66 @@ const quizData = [
       ],
       correctAnswer: "Performing compressions with only your hands and no body weight"
     },
+    {
+      question: "What is the recommended compression rate during CPR?",
+      options: [
+        "60–80 compressions per minute",
+        "100–120 compressions per minute",
+        "150–180 compressions per minute",
+        "200 compressions per minute"
+      ],
+      correctAnswer: "100–120 compressions per minute"
+    },
+      {
+    question: "When using an AED (defibrillator), what is the first step?",
+    options: [
+      "Place the pads directly on the victim's clothes",
+      "Turn on the AED and follow the instructions",
+      "Start chest compressions immediately",
+      "Give two breaths before using the AED"
+    ],
+      correctAnswer: "Turn on the AED and follow the instructions"
+    },
+    {
+      question: "Where should AED pads be placed on an adult victim?",
+      options: [
+        "One on the stomach, one on the back",
+        "One on the right chest, one on the left side below the armpit",
+        "Both pads on the chest close together",
+        "One on the neck, one on the leg"
+      ],
+      correctAnswer: "One on the right chest, one on the left side below the armpit"
+    },
+    {
+      question: "If a victim starts breathing normally again after CPR, what should you do?",
+      options: [
+        "Stop everything and leave the victim",
+        "Place the victim in the recovery position and monitor breathing",
+        "Continue compressions anyway",
+        "Give them something to drink"
+      ],
+      correctAnswer: "Place the victim in the recovery position and monitor breathing"
+    },
+    {
+      question: "What should you check before starting CPR?",
+      options: [
+        "If the victim is breathing and has a pulse",
+        "If the victim is sleeping",
+        "If the victim is cold",
+        "If the victim has eaten recently"
+      ],
+      correctAnswer: "If the victim is breathing and has a pulse"
+    },
+    {
+      question: "Why is it important not to interrupt chest compressions for too long?",
+      options: [
+        "Because the victim may wake up suddenly",
+        "Because blood circulation and oxygen supply stop",
+        "Because the rescuer may lose rhythm",
+        "Because it makes CPR more tiring"
+      ],
+      correctAnswer: "Because blood circulation and oxygen supply stop"
+    }
   ];
   
   export default quizData;

@@ -1,17 +1,29 @@
+version: "3.9"
+
 services:
   rasa:
     container_name: crp_chatbot
     image: rasa/rasa:3.6.20-full
     volumes:
-      - ./:/app
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./config.yml:/app/config.yml
+      - ./domain.yml:/app/domain.yml
+      - ./credentials.yml:/app/credentials.yml
+      - ./endpoints.yml:/app/endpoints.yml
     command:
       - run
+      - --model
+      - /app/models/20240920-175805-lower-marlin.tar.gz
       - --enable-api
       - --cors
-      - "http://localhost:3000,http://localhost:8080,https://cpr-chatbot.nightingale.uni-mainz.de"
+      - "*"
+      - --port
+      - "5005"
     ports:
-      - "5005:5005"
-  
+      - "5006:5005"
+    restart: always
+
   db:
     image: postgres
     restart: always
@@ -37,3 +49,5 @@ services:
       - ./docker/postgres/.env
     ports:
       - "5005:3000"
+    restart: always
+

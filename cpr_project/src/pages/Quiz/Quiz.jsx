@@ -76,7 +76,7 @@ const Quiz = () => {
                 <span className="info-label">Questions</span>
               </div>
               <div className="info-item">
-                <span className="info-number">~5</span>
+                <span className="info-number">~20</span>
                 <span className="info-label">Minutes</span>
               </div>
             </div>
@@ -105,40 +105,18 @@ const Quiz = () => {
               </p>
             </div>
 
-            <div className="score-details">
-              <h3>Review Your Answers</h3>
-              <div className="answers-review">
-                {userAnswers.map((answer, index) => (
-                  <div key={index} className={`review-item ${answer.isCorrect ? 'correct' : 'incorrect'}`}>
-                    <div className="review-header">
-                      <span className="question-number">Q{index + 1}</span>
-                      <span className={`result-badge ${answer.isCorrect ? 'correct' : 'incorrect'}`}>
-                        {answer.isCorrect ? '✓' : '✗'}
-                      </span>
-                    </div>
-                    <div className="review-content">
-                      <p className="review-question">{quizData[index].question}</p>
-                      <div className="review-answers">
-                        <div className={`review-answer your-answer ${answer.isCorrect ? 'correct' : 'incorrect'}`}>
-                          <span className="answer-label">Your answer:</span>
-                          <span className="answer-text">{answer.selectedAnswer}</span>
-                        </div>
-                        {!answer.isCorrect && (
-                          <div className="review-answer correct-answer">
-                            <span className="answer-label">Correct answer:</span>
-                            <span className="answer-text">{answer.correctAnswer}</span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             <div className="score-actions">
               <button className='restart-button' onClick={handleStartQuiz}>
                 Retake Quiz
+              </button>
+              <button
+                className='restart-button'
+                onClick={() => {
+                  handleStartQuiz(); // restart the quiz
+                  window.location.href = 'https://lifesaver.nightingale.uni-mainz.de'; // redirection to Home Page
+                }}
+              >
+                Home
               </button>
             </div>
           </div>
@@ -195,24 +173,6 @@ const Quiz = () => {
                   );
                 })}
               </div>
-
-              {showFeedback && (
-                <div className={`feedback ${selectedAnswer === quizData[currentQuestionIndex].correctAnswer ? 'correct' : 'incorrect'}`}>
-                  {selectedAnswer === quizData[currentQuestionIndex].correctAnswer ? (
-                    <div className="feedback-content">
-                      <span className="feedback-icon">🎉</span>
-                      <span className="feedback-text">Correct! Well done.</span>
-                    </div>
-                  ) : (
-                    <div className="feedback-content">
-                      <span className="feedback-icon">💡</span>
-                      <span className="feedback-text">
-                        The correct answer is: {quizData[currentQuestionIndex].correctAnswer}
-                      </span>
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
 
             <div className="question-actions">

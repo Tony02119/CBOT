@@ -2,38 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+* {
+  font-family: "Inter", sans-serif;
+}
 
 @layer base {
-  * {
-    font-family: "Inter", sans-serif;
-  }
-
-  body {
-    @apply bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen;
-  }
-
   .link {
-    @apply p-2 md:p-3 flex items-center text-lg text-gray-700 hover:text-primary-600 rounded-xl focus:outline-none focus:text-primary-600 transition-all duration-300 hover:bg-primary-50;
+    @apply p-1 md:p-2 flex items-center text-lg text-gray-800 hover:text-primary-600 rounded-lg focus:outline-none focus:text-primary-600;
   }
 
   .link-active {
-    @apply p-2 md:p-3 flex items-center text-lg text-primary-600 rounded-xl focus:outline-none bg-primary-100 font-medium;
+    @apply p-1 md:p-2 flex items-center text-lg text-primary-600 rounded-lg focus:outline-none;
   }
 
   .button {
-    @apply py-3 px-6 inline-flex items-center gap-x-2 w-fit text-sm font-semibold rounded-xl border border-transparent bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 active:from-primary-700 active:to-primary-800 disabled:opacity-50 disabled:pointer-events-none transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
-  }
-
-  .card {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary-200 transform hover:-translate-y-1;
-  }
-
-  .input-field {
-    @apply py-3 px-4 block w-full border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 rounded-xl text-sm transition-all duration-200 bg-white hover:border-gray-400;
-  }
-
-  .badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-800;
+    @apply py-3 px-4 inline-flex items-center gap-x-2 w-fit text-sm font-medium rounded-lg border border-transparent bg-primary-500 text-white hover:bg-primary-600 focus:outline-none active:bg-primary-700 disabled:opacity-50 disabled:pointer-events-none;
   }
 }

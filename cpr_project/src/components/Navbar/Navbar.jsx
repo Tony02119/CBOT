@@ -16,7 +16,6 @@ const Navbar = () => {
     setIsOpen(false);
   }
 
-  // Effet de scroll pour la navbar
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
@@ -27,7 +26,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Fermer le menu mobile quand on change de page
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
@@ -40,7 +38,7 @@ const Navbar = () => {
     <>
       <div className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-logo-box">
-          <Link to="/" style={{ height: "100%" }}>
+          <Link to="https://nightingaleheart.com" style={{ height: "250%" }}>
             <img src="/images/logo.png" alt="LifeSaver Logo" />
           </Link>
           <Link to="https://nightingaleheart.com/demos/healthlife" style={{ textDecoration: 'none' }}>
@@ -51,7 +49,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Navigation desktop */}
         <div className="navbar-link-box">
           <Link 
             to="/" 

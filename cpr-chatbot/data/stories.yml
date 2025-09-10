@@ -1,73 +1,60 @@
 version: "3.1"
 
 stories:
-- story: basic greeting and help
+- story: what is cardiac arrest
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: what_can_do
-  - action: utter_what_can_do
-
-- story: learn about cardiac arrest
-  steps:
-  - intent: what_is_cardiac_arrest
-  - action: utter_cardiac_arrest_info
   - intent: symptoms
-  - action: utter_symptoms
+  - action: utter_explanation_cardiac_arrest
 
-- story: emergency response flow
+- story: help detect cardial arrest
+  steps:
+  - intent: symptoms
+  - action: utter_symptoms_description_one
+  - action: utter_symptoms_description_two
+
+- story: how to react when seeing a cardial arrest
   steps:
   - intent: how_to_react
-  - action: utter_how_to_react
-  - intent: emergency_numbers
-  - action: utter_emergency_numbers
+  - action: utter_analyse_situation
+  - action: utter_emergency_call_recs
 
-- story: learn CPR basics
+- story: how to know emergency numbers
+  steps:
+  - intent: what_are_emergency_numbers
+  - action: utter_emergency_numbers
+  - action: utter_emergency_numbers_examples
+
+- story: how to know foreign emergency numbers
+  steps:
+  - intent: abroad_emergency_numbers
+  - action: utter_know_foreign_emergency_numbers
+
+- story: explain what is cpr
   steps:
   - intent: what_is_cpr
-  - action: utter_what_is_cpr
-  - intent: how_to_cpr
-  - action: utter_cpr_steps
+  - action: utter_cpr_explanation
 
-- story: CPR with rescue breathing
+- story: explain how to perform a correct cpr
   steps:
   - intent: how_to_cpr
   - action: utter_cpr_steps
-  - intent: mouth_to_mouth
-  - action: utter_mouth_to_mouth
 
-- story: learn about defibrillator
+- story: explain how to perform mouth-to-mouth
+  steps:
+  - intent: how_to_mouth_to_mouth
+  - action: utter_how_to_mouth_to_mouth
+
+- story: explain what is a defibrillator
   steps:
   - intent: what_is_defibrillator
   - action: utter_what_is_defibrillator
+
+- story: explain how to use a defibrillator
+  steps:
   - intent: how_to_defibrillator
   - action: utter_how_to_defibrillator
 
-- story: CPR benefits and motivation
+- story: explain what are the pros of doing cpr
   steps:
-  - intent: cpr_benefits
-  - action: utter_cpr_benefits
-  - intent: how_to_cpr
-  - action: utter_cpr_steps
-
-- story: complete emergency scenario
-  steps:
-  - intent: symptoms
-  - action: utter_symptoms
-  - intent: how_to_react
-  - action: utter_how_to_react
-  - intent: how_to_cpr
-  - action: utter_cpr_steps
-  - intent: thank_you
-  - action: utter_thank_you
-
-- story: user asks for help then learns CPR
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: how_to_cpr
-  - action: utter_cpr_steps
-  - intent: cpr_benefits
-  - action: utter_cpr_benefits
-  - intent: thank_you
-  - action: utter_thank_you
+  - intent: what_are_pros_cpr
+  - action: utter_pros_cpr

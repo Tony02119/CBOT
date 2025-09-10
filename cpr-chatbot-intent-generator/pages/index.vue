@@ -78,27 +78,22 @@ function nextAnswer() {
 </script>
 
 <template>
-	<div v-if="errorData.display" class="z-50 fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-		<div class="w-full max-w-md">
-			<div class="bg-white rounded-2xl shadow-2xl border border-gray-100">
-				<div class="p-6">
-					<div class="flex items-center mb-4">
-						<div class="flex-shrink-0">
-							<Icon name="lucide:alert-circle" class="size-6 text-red-500" />
-						</div>
-						<h1 class="ml-3 text-xl font-semibold text-gray-900">{{ errorData.title }}</h1>
-					</div>
+	<div v-if="errorData.display" class="z-40 fixed top-0 bottom-0 right-0 left-0 bg-black bg-opacity-30">
+		<div class="flex justify-center h-screen">
+			<div class="sm:w-1/2 sm:mt-12 h-fit mt-3 bg-white rounded-md">
+				<div class="p-5">
+					<h1 class="text-xl font-semibold mb-4 pb-2 border-b">{{ errorData.title }}</h1>
 
 					<div class="flex flex-col">
-						<p class="text-gray-700 mb-4">
+						<p class="mt-1 text-gray-800">
 							{{ errorData.message }}
 						</p>
-						<div class="bg-gray-50 rounded-xl p-4 max-h-40 overflow-y-auto border border-gray-200">
-							<p class="text-sm text-gray-600 font-mono">{{ errorData.codeText }}</p>
+						<div id="output-display-div" class="font-light max-h-80 p-2 rounded bg-gray-200">
+							<p>{{ errorData.codeText }}</p>
 						</div>
 					</div>
 
-					<div class="flex justify-end mt-6">
+					<div class="flex justify-end mt-5">
 						<button class="button" @click="errorData.display = false">Close</button>
 					</div>
 				</div>
@@ -106,96 +101,60 @@ function nextAnswer() {
 		</div>
 	</div>
 
-	<div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-		<div class="max-w-4xl px-4 pt-8 lg:pt-12 pb-16 sm:px-6 lg:px-8 mx-auto">
-			<div class="max-w-3xl mx-auto">
-				<div class="space-y-8 md:space-y-12">
-					<!-- Header Section -->
-					<div class="text-center space-y-4">
-						<div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-800 text-sm font-medium">
-							<Icon name="lucide:message-circle" class="size-4 mr-2" />
-							Intent Generator
-						</div>
-						<h1 class="text-4xl md:text-5xl font-bold text-gray-900">Chatbot's Answer</h1>
-						<p class="text-lg text-gray-600 max-w-2xl mx-auto">Help us improve our chatbot by suggesting questions that could lead to this answer.</p>
-					</div>
-
-					<!-- Answer Card -->
-					<div class="card p-8">
-						<div class="flex items-start space-x-4">
-							<div class="flex-shrink-0">
-								<div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center">
-									<Icon name="lucide:bot" class="size-6 text-white" />
-								</div>
-							</div>
-							<blockquote class="flex-1">
-								<p class="text-gray-800 text-xl leading-relaxed italic">
+	<div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+		<div class="max-w-2xl">
+			<div class="space-y-5 md:space-y-8">
+				<div class="space-y-3">
+					<h1 class="text-4xl">Chatbot's answer</h1>
+					<blockquote class="relative border-s-4 ps-4 sm:ps-6">
+						<p class="text-gray-800 sm:text-xl">
 							<em>{{ currentAnswer?.answer }}</em>
 						</p>
 					</blockquote>
-						</div>
 				</div>
 
-					<!-- Input Section -->
-					<div class="card p-6">
-						<h3 class="text-2xl font-semibold text-gray-900 mb-4">Enter your questions</h3>
-						<div class="flex gap-3">
-							<input type="text" id="input-user-question" @keypress.enter="saveQuestion"
-								class="input-field flex-1"
-								placeholder="How do I perform CPR?" aria-describedby="input-user-question-submit">
-							<button type="button" @click="saveQuestion" class="button" :disabled="saving">
-								<Icon name="lucide:plus" class="size-4" />
-								Add
+				<div class="space-y-3">
+					<h3 class="text-2xl font-semibold">Enter you questions</h3>
+					<div class="inline-flex gap-x-2 w-full">
+						<input type="text" id="input-user-question" @keypress.enter="saveQuestion"
+							class="py-3 px-4 block w-full border border-gray-200 focus:outline-primary-500 rounded-lg text-sm disabled:opacity-50 disabled:pointer-events-none"
+							placeholder="How do I ..." aria-describedby="input-user-question-submit">
+						<button type="button" @click="saveQuestion" class="button" :disabled="saving">
+							Add
 						</button>
 					</div>
-						<p class="mt-3 text-sm text-gray-500" id="input-user-question-submit">
+					<p class="mt-2 text-sm text-gray-500" id="input-user-question-submit">
 						You can press ENTER to add the question.
 					</p>
 				</div>
 
-					<!-- Questions List -->
-					<div class="card p-6">
-						<div class="flex items-center justify-between mb-4">
-							<h3 class="text-2xl font-semibold text-gray-900">Your questions</h3>
-							<div class="badge">
-								{{ examples.length }} question{{ examples.length !== 1 ? 's' : '' }}
-							</div>
-						</div>
+				<div class="space-y-3">
+					<h3 class="text-2xl font-semibold">Your questions</h3>
 
-						<div v-if="examples.length === 0" class="text-center py-12">
-							<Icon name="lucide:message-square-plus" class="size-12 text-gray-400 mx-auto mb-4" />
-							<p class="text-gray-500">No questions added yet. Start by adding your first question above!</p>
-						</div>
-
-						<ul v-else class="space-y-3 max-h-80 overflow-y-auto">
+					<ul class="max-h-80 sm:h-80 divide-y overflow-y-scroll">
 						<li v-for="example of examples" :key="example">
-								<div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-gray-300 transition-colors duration-200">
-									<p class="text-gray-800 flex-1 mr-4">{{ example }}</p>
-									<button class="flex items-center justify-center p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors duration-200" @click="removeExample(example)">
-										<Icon class="size-5" name="lucide:x" />
+							<div class="inline-flex items-center justify-between w-full px-2 py-1">
+								<p class="text-lg text-gray-800">{{ example }}</p>
+								<button class="flex items-center p-2" @click="removeExample(example)">
+									<Icon class="size-6" name="lucide:x" />
 								</button>
 							</div>
 						</li>
 					</ul>
 				</div>
 
-					<!-- Action Buttons -->
-					<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-						<button type="button" @click="downloadIntentsFile" class="button w-full sm:w-auto" title="Download intents">
-							<Icon class="size-5" name="lucide:download" />
-							<span class="hidden md:inline">Download intents</span>
-							<span class="md:hidden">Download</span>
+				<div class="flex flex-row items-center justify-center gap-2 pt-4 ">
+					<button type="button" @click="downloadIntentsFile" class="button" title="Download intents">
+						<Icon class="size-5" name="lucide:download" />
+						<p class="hidden md:block">Download intents</p>
 					</button>
-						<button type="button" @click="saveQuestions" class="button w-full sm:w-auto" title="Save questions" :disabled="!examples.length">
-							<Icon v-if="saving" class="size-5 animate-spin" name="lucide:loader-circle" />
-							<Icon v-else class="size-5" name="lucide:save" />
-							<span class="hidden md:inline">Save questions</span>
-							<span class="md:hidden">Save</span>
+					<button type="button" @click="saveQuestions" class="button" title="Save questions">
+						<Icon v-if="saving" class="size-5 animate-spin" name="lucide:loader-circle" />
+						<Icon v-else class="size-5" name="lucide:save" />
 					</button>
-						<button type="button" @click="nextAnswer" class="button w-full sm:w-auto" title="Next answer">
-							<span class="hidden md:inline">Next answer</span>
-							<span class="md:hidden">Next</span>
-							<Icon class="size-5" name="lucide:arrow-right" />
+					<button type="button" @click="nextAnswer" class="button" title="Next answer">
+						<p class="hidden md:block">Next answer</p>
+						<Icon class="size-5" name="lucide:arrow-right" />
 					</button>
 				</div>
 			</div>

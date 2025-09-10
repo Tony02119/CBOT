@@ -1,36 +1,45 @@
-import React from 'react'
-import "./instructions.css"
+import React from 'react';
+import "./instructions.css";
 import { Link } from 'react-router-dom';
 
 const Instructions = () => {
   return (
     <div className='box'>
-      <div className="title-section">
-        <h1 className="page-title">First Aid Instructions</h1>
-        <p className="page-subtitle">Learn life-saving techniques with step-by-step visual guides</p>
-      </div>
-      
       <div className="upper-div">
-        <Link to="/cprinstruction" className="card">
-          <div className="card-icon">
-            ❤️
+        <Link to="/cprinstruction" className="card"> {/* CPR instruction page */}
+          <div>
+            <p style={{ fontSize: "1.5em", fontWeight: "bold" , marginBottom: "-10px"}}>How to perform CPR</p>
+            <p style={{ fontSize: "1em" }}>(Cardiopulmonary Resuscitation)</p>
           </div>
-          <h2 className="card-title">CPR Instructions</h2>
-          <p className="card-description">Learn how to perform Cardiopulmonary Resuscitation with detailed step-by-step instructions</p>
-          <span className="card-button">Start Learning</span>
+          <img
+            src="/images/cpr_logo.png"
+            style={{
+              width: "80px",
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto"
+            }}
+          />
         </Link>
 
-        <Link to="/aedinstruction" className="card">
-          <div className="card-icon">
-            ⚡
+        <Link to="/aedinstruction" className="card"> {/* AED instruction page */}
+          <div>
+            <p style={{ fontSize: "1.5em", fontWeight: "bold" , marginBottom: "-10px"}}>How to use an AED</p>
+            <p style={{ fontSize: "1em" }}>(Automatic External Defibrillator)</p>
+            <img
+              src="/images/aed_logo.png"
+              style={{
+                width: "80px",
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto"
+              }}
+            />
           </div>
-          <h2 className="card-title">AED Instructions</h2>
-          <p className="card-description">Master the use of Automatic External Defibrillator with visual guidance</p>
-          <span className="card-button">Start Learning</span>
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Instructions
+export default Instructions;
