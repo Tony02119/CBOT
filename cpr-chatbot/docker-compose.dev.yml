@@ -13,8 +13,6 @@ services:
       - ./endpoints.yml:/app/endpoints.yml
     command:
       - run
-      - --model
-      - /app/models/20240920-175805-lower-marlin.tar.gz
       - --enable-api
       - --cors
       - "*"
