@@ -13,12 +13,17 @@ const Chatbot = () => {
 	const [chatMessages, setChatMessages] = useState([]);
 	const chatroomRef = useRef(null);
 	const initialMessageSent = useRef(false);
-	const DOMAIN = "http://localhost:5006"; //https://cpr-chatbot.nightingale.uni-mainz.de ou http://localhost:5005
-	const URL = "/webhooks/rest/webhook";//const URL = "/api/ask_chatbot";
+	const DOMAIN = "http://localhost:5006";
+	const URL = "/webhooks/rest/webhook";
 
 	const sendMessage = async (message) => {
 		setUserMessageCount(userMessageCount + 1);
-		const userMessage = { sender: "You", message, analytics: enableAnalytics, conv_position: userMessageCount };
+		const userMessage = { 
+			sender: "user", 
+			message: message,
+			analytics: enableAnalytics, 
+			conv_position: userMessageCount 
+		};
 
 		try {
 			setChatMessages(prevMessages => [...prevMessages, { sender: "You", text: message }]);
@@ -27,24 +32,49 @@ const Chatbot = () => {
 			const response = await axios.post(DOMAIN + URL, userMessage, {
 				headers: {
 					'Content-Type': 'application/json',
+					'Access-Control-Allow-Origin': '*',
 				},
+				timeout: 10000, // 10 second timeout
 			});
 
-			for (const botMessage of response.data) {
-				botMessage.text.split("\n\n").forEach(message => {
-					if (!message.trim()) return;
-					setChatMessages(prevMessages => [...prevMessages, { sender: "Chatbot", text: message }]);
-				});
+			if (response.data && Array.isArray(response.data)) {
+				for (const botMessage of response.data) {
+					if (botMessage.text) {
+						botMessage.text.split("\n\n").forEach(messageText => {
+							if (!messageText.trim()) return;
+							setChatMessages(prevMessages => [...prevMessages, { sender: "Chatbot", text: messageText }]);
+						});
+					}
 
-				if (botMessage.buttons) {
-					setChatMessages((prevMessages) => [
-						...prevMessages,
-						{ sender: "Chatbot", buttons: botMessage.buttons },
-					]);
+					if (botMessage.buttons) {
+						setChatMessages((prevMessages) => [
+							...prevMessages,
+							{ sender: "Chatbot", buttons: botMessage.buttons },
+						]);
+					}
 				}
+			} else {
+				setChatMessages(prevMessages => [...prevMessages, { 
+					sender: "Chatbot", 
+					text: "Sorry, I didn't receive a proper response. Please try again." 
+				}]);
 			}
 		} catch (error) {
 			console.error('Error sending message:', error);
+			let errorMessage = "Sorry, I'm having trouble connecting to the server. ";
+			
+			if (error.code === 'ERR_NETWORK') {
+				errorMessage += "Please make sure the chatbot server is running on localhost:5006.";
+			} else if (error.code === 'ECONNABORTED') {
+				errorMessage += "The request timed out. Please try again.";
+			} else {
+				errorMessage += "Please try again later.";
+			}
+			
+			setChatMessages(prevMessages => [...prevMessages, { 
+				sender: "Chatbot", 
+				text: errorMessage 
+			}]);
 		}
 	};
 
