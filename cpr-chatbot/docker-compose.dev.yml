@@ -18,11 +18,19 @@ services:
       - --enable-api
       - --cors
       - "*"
+      - --debug
       - --port
       - "5005"
     ports:
       - "5006:5005"
     restart: always
+    environment:
+      - RASA_TELEMETRY_ENABLED=false
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5005/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   db:
     image: postgres
