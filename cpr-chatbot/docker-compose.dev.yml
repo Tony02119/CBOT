@@ -13,8 +13,6 @@ services:
       - ./endpoints.yml:/app/endpoints.yml
     command:
       - run
-      - --model
-      - /app/models/20240920-175805-lower-marlin.tar.gz
       - --enable-api
       - --cors
       - "*"
@@ -24,6 +22,11 @@ services:
     ports:
       - "5006:5005"
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5005/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   db:
     image: postgres
