@@ -13,8 +13,9 @@ const Chatbot = () => {
 	const [chatMessages, setChatMessages] = useState([]);
 	const chatroomRef = useRef(null);
 	const initialMessageSent = useRef(false);
-	const DOMAIN = "http://localhost:5006";
-	const URL = "/webhooks/rest/webhook";
+	// Use proxy endpoint to avoid CORS issues
+	const DOMAIN = "";
+	const URL = "/api/chatbot";
 
 	const sendMessage = async (message) => {
 		setUserMessageCount(userMessageCount + 1);
