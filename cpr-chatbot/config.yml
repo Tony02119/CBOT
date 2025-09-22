@@ -29,13 +29,22 @@ policies: null
 
 pipeline:
   - name: WhitespaceTokenizer
+  - name: SpellChecker
+    dictionary_path: "data/dictionary.txt"
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
   - name: DIETClassifier
     epochs: 100
+    entity_recognition: False
+    intent_classification: True
+    use_masked_language_model: True
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.98
+    threshold: 0.85

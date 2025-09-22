@@ -1,6 +1,157 @@
 version: "3.1"
 
 nlu:
+# Variantes avec fautes d'orthographe communes
+- intent: greet
+  examples: |
+    - helo
+    - hallo
+    - hi there
+    - good mornig
+    - good evning
+    - hey ther
+    - hola
+    - bonjur
+
+- intent: what_is_cpr
+  examples: |
+    - what is cpr
+    - wat is cpr
+    - whats cpr
+    - what's cpr
+    - cpr meaning
+    - cpr definiton
+    - define cpr
+    - cpr stands for
+    - cpr stand for
+    - cardiopulmonary resusitation
+    - cardio pulmonary resuscitation
+    - heart lung resuscitation
+    - chest compression
+    - mouth to mouth
+    - rescue breathing
+    - life saving technique
+    - emergency procedure
+    - first aid cpr
+
+- intent: how_to_cpr
+  examples: |
+    - how to do cpr
+    - how do cpr
+    - cpr steps
+    - cpr procedure
+    - cpr technique
+    - cpr method
+    - perform cpr
+    - give cpr
+    - do cpr
+    - cpr instructions
+    - cpr guide
+    - chest compressions how
+    - chest compression steps
+    - heart massage
+    - cardiac massage
+    - resuscitation steps
+    - emergency cpr
+    - basic cpr
+    - cpr basics
+    - learn cpr
+    - cpr training
+    - how to save life
+    - life saving steps
+    - emergency help
+    - first aid steps
+    - rescue procedure
+    - revival technique
+    - bring back to life
+    - restart heart
+    - heart stopped help
+    - no pulse help
+    - not breathing help
+    - unconscious help
+    - collapsed person help
+    - cardiac arrest help
+    - heart attack help
+    - emergency response
+    - crisis management
+    - urgent care
+    - immediate help
+    - quick response
+    - fast action
+    - emergency action
+    - life support
+    - basic life support
+    - advanced life support
+    - medical emergency
+    - health emergency
+    - critical situation
+    - life threatening
+    - save someone
+    - help victim
+    - assist patient
+    - aid injured
+    - support casualty
+
+- intent: symptoms
+  examples: |
+    - symptoms
+    - signs
+    - indicators
+    - warning signs
+    - red flags
+    - danger signs
+    - emergency signs
+    - cardiac arrest symptoms
+    - heart attack signs
+    - stroke symptoms
+    - choking signs
+    - allergic reaction symptoms
+    - seizure signs
+    - shock symptoms
+    - bleeding signs
+    - burn symptoms
+    - fracture signs
+    - poisoning symptoms
+    - overdose signs
+    - hypothermia symptoms
+    - heat stroke signs
+    - drowning symptoms
+    - spinal injury signs
+    - head injury symptoms
+    - internal bleeding signs
+    - organ failure symptoms
+    - respiratory distress signs
+    - cardiac distress symptoms
+    - neurological symptoms
+    - psychological symptoms
+    - physical symptoms
+    - visible signs
+    - audible signs
+    - behavioral changes
+    - consciousness changes
+    - breathing changes
+    - circulation changes
+    - skin changes
+    - temperature changes
+    - pain symptoms
+    - discomfort signs
+    - distress signals
+    - emergency indicators
+    - medical symptoms
+    - health signs
+    - illness symptoms
+    - injury signs
+    - trauma symptoms
+    - critical signs
+    - vital signs
+    - life signs
+    - death signs
+    - recovery signs
+    - improvement signs
+    - deterioration signs
+    - stable signs
+    - unstable signs
+
 - intent: greet
   examples: |
     - hey

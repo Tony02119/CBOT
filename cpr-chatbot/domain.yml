@@ -3,6 +3,7 @@ version: "3.1"
 intents:
   - greet
   - thank_you
+  - nlu_fallback
   - what_can_do
   - what_is_cardiac_arrest
   - symptoms
@@ -48,6 +49,10 @@ intents:
   - medical_history
   - comfort_victim
   - post_emergency_care
+
+actions:
+  - action_spell_check
+  - action_suggest_correction
 
 responses:
   utter_please_rephrase:
