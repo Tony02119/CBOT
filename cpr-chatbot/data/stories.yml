@@ -58,3 +58,74 @@ stories:
   steps:
   - intent: what_are_pros_cpr
   - action: utter_pros_cpr
+
+# Nouvelles histoires
+- story: explain heart attack
+  steps:
+  - intent: what_is_heart_attack
+  - action: utter_what_is_heart_attack
+
+- story: help with choking
+  steps:
+  - intent: choking_help
+  - action: utter_choking_help
+
+- story: explain recovery position
+  steps:
+  - intent: recovery_position
+  - action: utter_recovery_position
+
+- story: help control bleeding
+  steps:
+  - intent: bleeding_control
+  - action: utter_bleeding_control
+
+- story: treat medical shock
+  steps:
+  - intent: shock_treatment
+  - action: utter_shock_treatment
+
+- story: treat burns
+  steps:
+  - intent: burns_treatment
+  - action: utter_burns_treatment
+
+- story: help with fractures
+  steps:
+  - intent: fracture_help
+  - action: utter_fracture_help
+
+- story: handle allergic reaction
+  steps:
+  - intent: allergic_reaction
+  - action: utter_allergic_reaction
+
+- story: help with seizure
+  steps:
+  - intent: seizure_help
+  - action: utter_seizure_help
+
+- story: recognize stroke
+  steps:
+  - intent: stroke_recognition
+  - action: utter_stroke_recognition
+
+- story: explain child cpr
+  steps:
+  - intent: child_cpr
+  - action: utter_child_cpr
+
+- story: manage panic
+  steps:
+  - intent: panic_management
+  - action: utter_panic_management
+
+- story: emergency supplies info
+  steps:
+  - intent: emergency_supplies
+  - action: utter_emergency_supplies
+
+- story: scene safety assessment
+  steps:
+  - intent: scene_safety
+  - action: utter_scene_safety

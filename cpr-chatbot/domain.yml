@@ -16,6 +16,39 @@ intents:
   - how_to_defibrillator
   - what_are_pros_cpr
 
+  # Nouveaux intents
+  - what_is_heart_attack
+  - choking_help
+  - recovery_position
+  - bleeding_control
+  - shock_treatment
+  - burns_treatment
+  - fracture_help
+  - allergic_reaction
+  - seizure_help
+  - stroke_recognition
+  - hypothermia_help
+  - heat_exhaustion
+  - poisoning_help
+  - drowning_rescue
+  - spinal_injury
+  - pregnancy_emergency
+  - child_cpr
+  - elderly_cpr
+  - cpr_complications
+  - when_to_stop_cpr
+  - cpr_training
+  - legal_protection
+  - panic_management
+  - multiple_victims
+  - emergency_supplies
+  - calling_emergency_tips
+  - bystander_help
+  - scene_safety
+  - medical_history
+  - comfort_victim
+  - post_emergency_care
+
 responses:
   utter_please_rephrase:
   - text: "I'm sorry, I didn't quite understand that. Please ask questions related to CPR and first aid gestures during cardiac arrest."
@@ -118,6 +151,249 @@ responses:
   utter_pros_cpr:
   - text: "Performing CPR greatly increase the chances of survival of the victim and reduce the potential after-effects.\n\n
   The first irreversible brain damages appear after 5 minutes without oxygen, hence the importance of starting the CPR as soon as possible."
+
+  # Nouvelles réponses
+  utter_what_is_heart_attack:
+  - text: "A heart attack occurs when blood flow to part of the heart muscle is blocked, usually by a blood clot. Unlike cardiac arrest, the heart usually keeps beating during a heart attack.\n\n
+    **Heart Attack vs Cardiac Arrest:**\n
+    - Heart Attack: Heart still beating, chest pain, conscious\n
+    - Cardiac Arrest: Heart stops, unconscious, no pulse\n\n
+    **Heart Attack Symptoms:**\n
+    - Chest pain or pressure\n
+    - Pain in arms, neck, jaw, or back\n
+    - Shortness of breath\n
+    - Nausea or vomiting\n
+    - Sweating\n\n
+    **Action:** Call emergency services immediately and give aspirin if available and not allergic."
+
+  utter_choking_help:
+  - text: "**For Conscious Adult/Child Choking:**\n\n
+    1. **Encourage coughing** - If they can cough, let them try\n
+    2. **Back blows** - Lean them forward, give 5 sharp blows between shoulder blades\n
+    3. **Abdominal thrusts (Heimlich)** - Stand behind, hands below ribcage, thrust inward and upward 5 times\n
+    4. **Alternate** - 5 back blows, 5 abdominal thrusts\n
+    5. **Call emergency** if object doesn't come out\n\n
+    **For Infants (under 1 year):**\n
+    - 5 back blows on thigh\n
+    - 5 chest thrusts with 2 fingers\n
+    - NO abdominal thrusts for babies\n\n
+    **If person becomes unconscious:** Start CPR immediately!"
+
+  utter_recovery_position:
+  - text: "**Use recovery position when person is:**\n
+    - Unconscious but breathing normally\n
+    - Responsive but drowsy\n\n
+    **Steps:**\n
+    1. **Kneel beside** the person\n
+    2. **Straighten legs** and place arm nearest you at right angle\n
+    3. **Bring far arm** across chest, hold hand against near cheek\n
+    4. **Lift far knee** and pull to roll person toward you\n
+    5. **Tilt head back** slightly to keep airway open\n
+    6. **Monitor breathing** continuously\n\n
+    **Benefits:** Prevents choking on vomit, keeps airway clear, stable position."
+
+  utter_bleeding_control:
+  - text: "**Severe Bleeding Control:**\n\n
+    1. **Apply direct pressure** - Use clean cloth, press firmly on wound\n
+    2. **Elevate** - Raise injured area above heart level if possible\n
+    3. **Don't remove** embedded objects - stabilize them instead\n
+    4. **Add more dressings** - Don't remove blood-soaked ones\n
+    5. **Pressure points** - Apply pressure to artery above wound\n\n
+    **For severe bleeding:**\n
+    - Call emergency services immediately\n
+    - Consider tourniquet for limb bleeding if trained\n
+    - Watch for signs of shock\n\n
+    **Signs of shock:** Pale, cold, weak pulse, rapid breathing"
+
+  utter_shock_treatment:
+  - text: "**Medical Shock Treatment:**\n\n
+    **Signs of Shock:**\n
+    - Pale, cold, clammy skin\n
+    - Rapid, weak pulse\n
+    - Rapid, shallow breathing\n
+    - Weakness, dizziness\n
+    - Nausea, vomiting\n
+    - Confusion, anxiety\n\n
+    **Treatment:**\n
+    1. **Call emergency services** immediately\n
+    2. **Lay person down** with legs elevated 12 inches\n
+    3. **Keep warm** with blankets\n
+    4. **Loosen tight clothing**\n
+    5. **Monitor breathing** and pulse\n
+    6. **Do NOT** give food or water\n
+    7. **Reassure** the person\n\n
+    **If unconscious:** Check breathing and be ready to start CPR"
+
+  utter_burns_treatment:
+  - text: "**Burn Treatment:**\n\n
+    **For Minor Burns:**\n
+    1. **Cool with water** - Run cool (not ice) water for 10-20 minutes\n
+    2. **Remove jewelry** before swelling\n
+    3. **Don't break blisters**\n
+    4. **Apply loose bandage**\n\n
+    **For Severe Burns:**\n
+    1. **Call emergency services**\n
+    2. **Cool with water** if safe to do so\n
+    3. **Cover with clean cloth**\n
+    4. **Don't remove** stuck clothing\n
+    5. **Treat for shock**\n\n
+    **Chemical Burns:**\n
+    - Flush with water for 20+ minutes\n
+    - Remove contaminated clothing\n\n
+    **Electrical Burns:**\n
+    - Ensure power is OFF before approaching\n
+    - May have internal injuries"
+
+  utter_fracture_help:
+  - text: "**Suspected Fracture Care:**\n\n
+    **Signs of Fracture:**\n
+    - Severe pain\n
+    - Swelling, bruising\n
+    - Deformity or abnormal position\n
+    - Unable to move or bear weight\n
+    - Bone visible through skin\n\n
+    **Treatment:**\n
+    1. **Don't move** the person unless in danger\n
+    2. **Immobilize** the injured area\n
+    3. **Support** above and below the fracture\n
+    4. **Apply ice** wrapped in cloth\n
+    5. **Call emergency services**\n
+    6. **Watch for shock**\n\n
+    **Open Fracture:**\n
+    - Don't push bone back in\n
+    - Cover wound with sterile dressing\n
+    - Control bleeding around wound"
+
+  utter_allergic_reaction:
+  - text: "**Severe Allergic Reaction (Anaphylaxis):**\n\n
+    **Signs:**\n
+    - Difficulty breathing, wheezing\n
+    - Swelling of face, lips, tongue\n
+    - Rapid pulse\n
+    - Dizziness, fainting\n
+    - Widespread rash or hives\n
+    - Nausea, vomiting\n\n
+    **Treatment:**\n
+    1. **Call emergency services** immediately\n
+    2. **Use EpiPen** if available - inject into outer thigh\n
+    3. **Help person sit up** if breathing difficulty\n
+    4. **Lay flat** if feeling faint\n
+    5. **Be ready for CPR** if they become unconscious\n\n
+    **EpiPen Use:**\n
+    - Remove safety cap\n
+    - Press firmly into thigh for 10 seconds\n
+    - Massage injection site"
+
+  utter_seizure_help:
+  - text: "**Seizure First Aid:**\n\n
+    **During Seizure:**\n
+    1. **Stay calm** and time the seizure\n
+    2. **Clear area** of dangerous objects\n
+    3. **Cushion head** with something soft\n
+    4. **Turn on side** if possible to prevent choking\n
+    5. **Don't restrain** or put anything in mouth\n
+    6. **Stay with person** until fully conscious\n\n
+    **Call Emergency Services if:**\n
+    - Seizure lasts more than 5 minutes\n
+    - Person doesn't wake up after seizure\n
+    - Another seizure starts\n
+    - Person is injured\n
+    - First-time seizure\n
+    - Person has diabetes or is pregnant\n\n
+    **After Seizure:** Person may be confused - reassure and keep safe"
+
+  utter_stroke_recognition:
+  - text: "**FAST Stroke Recognition:**\n\n
+    **F - Face:** Ask person to smile - does face droop on one side?\n
+    **A - Arms:** Ask to raise both arms - does one drift down?\n
+    **S - Speech:** Ask to repeat simple phrase - is speech slurred?\n
+    **T - Time:** If any signs present, call emergency immediately!\n\n
+    **Other Stroke Signs:**\n
+    - Sudden severe headache\n
+    - Sudden vision loss\n
+    - Sudden dizziness, loss of balance\n
+    - Sudden numbness, especially one side\n\n
+    **Action:**\n
+    1. **Call emergency services** immediately\n
+    2. **Note time** symptoms started\n
+    3. **Keep person calm** and comfortable\n
+    4. **Don't give** food, water, or medication\n\n
+    **Remember:** Time is brain - every minute counts!"
+
+  utter_child_cpr:
+  - text: "**CPR for Children (1-8 years):**\n\n
+    **Differences from Adult CPR:**\n
+    - Use **one or two hands** for compressions\n
+    - Compress **2 inches deep** (5cm)\n
+    - Same rate: **100-120 per minute**\n
+    - Same ratio: **30 compressions : 2 breaths**\n\n
+    **Infant CPR (under 1 year):**\n
+    - Use **two fingers** for compressions\n
+    - Compress **1.5 inches deep** (4cm)\n
+    - Place fingers on **lower half of breastbone**\n
+    - Cover **mouth and nose** with your mouth for breaths\n\n
+    **Key Points:**\n
+    - Children's hearts are smaller - adjust force\n
+    - Call emergency services immediately\n
+    - Continue until help arrives or child responds"
+    buttons:
+    - title: "Adult CPR Steps"
+      payload: "/how_to_cpr"
+
+  utter_panic_management:
+  - text: "**Stay Calm in Emergency:**\n\n
+    **Quick Calm-Down Steps:**\n
+    1. **Take deep breaths** - In for 4, hold for 4, out for 4\n
+    2. **Focus on facts** - What exactly is happening?\n
+    3. **Prioritize actions** - What needs to be done first?\n
+    4. **Call for help** - You don't have to handle this alone\n\n
+    **Remember:**\n
+    - Your calm helps the victim stay calm\n
+    - Even basic first aid is better than none\n
+    - Emergency services will guide you\n
+    - You're doing your best in a difficult situation\n\n
+    **If overwhelmed:** Focus on calling emergency services - they can talk you through everything step by step."
+
+  utter_emergency_supplies:
+  - text: "**Essential First Aid Kit Items:**\n\n
+    **Wound Care:**\n
+    - Sterile gauze pads (various sizes)\n
+    - Medical tape\n
+    - Elastic bandages\n
+    - Adhesive bandages\n
+    - Antiseptic wipes\n\n
+    **Tools:**\n
+    - Scissors\n
+    - Tweezers\n
+    - Thermometer\n
+    - Disposable gloves\n\n
+    **Medications:**\n
+    - Pain relievers (aspirin, ibuprofen)\n
+    - Antihistamine\n
+    - Burn gel\n\n
+    **Emergency Items:**\n
+    - Emergency contact numbers\n
+    - Flashlight\n
+    - Emergency blanket\n\n
+    **Check kit every 6 months** and replace expired items."
+
+  utter_scene_safety:
+  - text: "**Scene Safety Assessment:**\n\n
+    **Before Approaching:**\n
+    1. **Look for hazards** - Fire, electrical wires, traffic, violence\n
+    2. **Check stability** - Unstable structures, slopes\n
+    3. **Assess environment** - Toxic fumes, water, ice\n
+    4. **Number of victims** - Are there multiple people injured?\n\n
+    **Safety Rules:**\n
+    - **You can't help if you become a victim**\n
+    - **Call professionals** for dangerous situations\n
+    - **Move victim only** if in immediate danger\n
+    - **Use protective equipment** when available\n\n
+    **If scene is unsafe:**\n
+    - Call emergency services immediately\n
+    - Direct traffic or crowds away\n
+    - Wait for professional rescuers\n\n
+    **Remember:** Your safety comes first!"
 
 session_config:
   session_expiration_time: 60

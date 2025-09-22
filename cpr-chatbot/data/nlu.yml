@@ -123,6 +123,373 @@ nlu:
     - How does cardiac arrest differ from a heart attack?
     - What are the consequences of cardiac arrest?
 
+- intent: what_is_heart_attack
+  examples: |
+    - What is a heart attack?
+    - What's the difference between heart attack and cardiac arrest?
+    - How do I know if someone is having a heart attack?
+    - Heart attack symptoms
+    - What causes a heart attack?
+    - Is heart attack the same as cardiac arrest?
+    - What happens during a heart attack?
+    - Heart attack vs cardiac arrest
+    - Signs of heart attack
+    - What to do for heart attack?
+
+- intent: choking_help
+  examples: |
+    - Someone is choking
+    - How to help choking person
+    - What to do when choking
+    - Heimlich maneuver
+    - Choking first aid
+    - Person can't breathe
+    - Food stuck in throat
+    - How to perform Heimlich
+    - Choking emergency
+    - Clear airway obstruction
+    - Back blows for choking
+    - Abdominal thrusts
+    - Choking infant
+    - Baby choking help
+    - Adult choking procedure
+
+- intent: recovery_position
+  examples: |
+    - Recovery position
+    - How to put someone in recovery position
+    - Unconscious but breathing
+    - Side recovery position
+    - Lateral safety position
+    - What is recovery position
+    - When to use recovery position
+    - How to place unconscious person
+    - Safe position for unconscious
+    - Recovery position steps
+    - Unconscious person breathing
+    - Side position safety
+
+- intent: bleeding_control
+  examples: |
+    - How to stop bleeding
+    - Severe bleeding first aid
+    - Control heavy bleeding
+    - Pressure on wound
+    - Bleeding emergency
+    - How to treat cuts
+    - Stop blood loss
+    - Wound care emergency
+    - Heavy bleeding help
+    - Apply pressure bleeding
+    - Tourniquet use
+    - Bleeding control techniques
+
+- intent: shock_treatment
+  examples: |
+    - Medical shock treatment
+    - Person in shock
+    - How to treat shock
+    - Signs of shock
+    - Shock first aid
+    - What is medical shock
+    - Shock symptoms
+    - How to help shock victim
+    - Treating traumatic shock
+    - Shock emergency care
+
+- intent: burns_treatment
+  examples: |
+    - How to treat burns
+    - Burn first aid
+    - Severe burn treatment
+    - What to do for burns
+    - Burn emergency care
+    - Cool water for burns
+    - Chemical burn help
+    - Electrical burn treatment
+    - Third degree burn
+    - Minor burn care
+    - Burn wound treatment
+
+- intent: fracture_help
+  examples: |
+    - Broken bone first aid
+    - How to help fracture
+    - Suspected fracture
+    - Broken arm help
+    - Broken leg first aid
+    - Immobilize fracture
+    - Bone fracture emergency
+    - What to do broken bone
+    - Fracture treatment
+    - Splinting fracture
+
+- intent: allergic_reaction
+  examples: |
+    - Allergic reaction help
+    - Severe allergy emergency
+    - Anaphylaxis treatment
+    - EpiPen use
+    - Allergic shock
+    - How to use epinephrine
+    - Severe allergic reaction
+    - Anaphylactic shock help
+    - Allergy emergency
+    - Food allergy reaction
+
+- intent: seizure_help
+  examples: |
+    - Someone having seizure
+    - Epileptic seizure help
+    - What to do during seizure
+    - Seizure first aid
+    - Convulsion help
+    - Epilepsy emergency
+    - How to help seizure
+    - Seizure safety
+    - Person having fit
+    - Seizure response
+
+- intent: stroke_recognition
+  examples: |
+    - Signs of stroke
+    - Stroke symptoms
+    - How to recognize stroke
+    - FAST stroke test
+    - Stroke emergency
+    - What is a stroke
+    - Stroke first aid
+    - Brain attack symptoms
+    - Stroke warning signs
+    - How to help stroke victim
+
+- intent: hypothermia_help
+  examples: |
+    - Hypothermia treatment
+    - Person too cold
+    - Cold exposure help
+    - How to warm someone
+    - Hypothermia first aid
+    - Freezing person help
+    - Cold emergency
+    - Body temperature too low
+    - Warming hypothermia victim
+
+- intent: heat_exhaustion
+  examples: |
+    - Heat exhaustion help
+    - Heat stroke treatment
+    - Too hot emergency
+    - Overheating person
+    - Heat emergency
+    - Hyperthermia treatment
+    - Hot weather emergency
+    - Heat illness help
+    - Cooling overheated person
+
+- intent: poisoning_help
+  examples: |
+    - Poisoning emergency
+    - Someone poisoned
+    - Poison control help
+    - Toxic substance ingestion
+    - Chemical poisoning
+    - Food poisoning emergency
+    - What to do poisoning
+    - Poison first aid
+    - Overdose help
+
+- intent: drowning_rescue
+  examples: |
+    - Drowning person help
+    - Water rescue
+    - Near drowning treatment
+    - How to save drowning person
+    - Water emergency
+    - Drowning first aid
+    - Rescue from water
+    - Water safety emergency
+
+- intent: spinal_injury
+  examples: |
+    - Spinal injury help
+    - Back injury first aid
+    - Neck injury care
+    - Don't move injured person
+    - Spinal immobilization
+    - Back pain emergency
+    - Neck pain severe
+    - Spine injury treatment
+
+- intent: pregnancy_emergency
+  examples: |
+    - Pregnant woman emergency
+    - Pregnancy complications
+    - Childbirth emergency
+    - Labor emergency
+    - Pregnant woman unconscious
+    - Emergency delivery
+    - Pregnancy first aid
+
+- intent: child_cpr
+  examples: |
+    - CPR for children
+    - Child CPR steps
+    - How to do CPR on child
+    - Pediatric CPR
+    - Kid CPR procedure
+    - Child resuscitation
+    - CPR for kids
+    - Child cardiac arrest
+    - Infant CPR
+    - Baby CPR steps
+    - Newborn CPR
+    - Toddler CPR
+
+- intent: elderly_cpr
+  examples: |
+    - CPR for elderly
+    - Old person CPR
+    - Senior citizen CPR
+    - Elderly cardiac arrest
+    - CPR on older adults
+    - Geriatric CPR
+    - Fragile person CPR
+
+- intent: cpr_complications
+  examples: |
+    - CPR complications
+    - Broken ribs during CPR
+    - CPR side effects
+    - Injuries from CPR
+    - CPR risks
+    - What if ribs break CPR
+    - CPR damage
+    - Complications chest compressions
+
+- intent: when_to_stop_cpr
+  examples: |
+    - When to stop CPR
+    - How long do CPR
+    - Stop CPR when
+    - CPR duration
+    - When to give up CPR
+    - CPR time limit
+    - Stop resuscitation when
+    - End CPR procedure
+
+- intent: cpr_training
+  examples: |
+    - Where to learn CPR
+    - CPR training courses
+    - CPR certification
+    - Learn CPR classes
+    - CPR course near me
+    - Get CPR certified
+    - CPR training programs
+    - First aid training
+
+- intent: legal_protection
+  examples: |
+    - Good Samaritan law
+    - Legal protection CPR
+    - Can I be sued CPR
+    - Legal liability first aid
+    - Protected by law CPR
+    - Good Samaritan protection
+    - Legal coverage helping
+
+- intent: panic_management
+  examples: |
+    - I'm panicking
+    - Stay calm emergency
+    - How to not panic
+    - Keep calm crisis
+    - Panic attack emergency
+    - Anxiety emergency
+    - Stress emergency situation
+    - Overwhelmed emergency
+
+- intent: multiple_victims
+  examples: |
+    - Multiple victims
+    - Mass casualty event
+    - Many injured people
+    - Triage emergency
+    - Multiple emergencies
+    - Who to help first
+    - Priority in emergencies
+    - Multiple casualties
+
+- intent: emergency_supplies
+  examples: |
+    - First aid kit contents
+    - Emergency supplies
+    - What to have emergency
+    - First aid kit items
+    - Emergency preparedness
+    - Medical supplies home
+    - Emergency kit essentials
+
+- intent: calling_emergency_tips
+  examples: |
+    - How to call emergency
+    - What to say emergency call
+    - Emergency call tips
+    - Calling 911 advice
+    - Emergency dispatcher
+    - What information give emergency
+    - Emergency call procedure
+
+- intent: bystander_help
+  examples: |
+    - Get help from others
+    - Ask bystanders help
+    - Crowd control emergency
+    - Direct people emergency
+    - Assign tasks emergency
+    - Organize bystanders
+    - Get crowd to help
+
+- intent: scene_safety
+  examples: |
+    - Scene safety
+    - Check for dangers
+    - Safe to approach
+    - Environmental hazards
+    - Safety first emergency
+    - Assess scene safety
+    - Danger assessment
+    - Safe rescue approach
+
+- intent: medical_history
+  examples: |
+    - Medical history important
+    - Patient medical information
+    - Allergies emergency
+    - Medications patient taking
+    - Medical conditions emergency
+    - Health history emergency
+
+- intent: comfort_victim
+  examples: |
+    - Comfort injured person
+    - Reassure victim
+    - Talk to injured person
+    - Keep victim calm
+    - Emotional support emergency
+    - Comfort scared person
+    - Reassurance emergency
+
+- intent: post_emergency_care
+  examples: |
+    - After emergency care
+    - Post resuscitation care
+    - Follow up emergency
+    - After CPR what next
+    - Recovery after emergency
+    - Continued care emergency
+
 - intent: symptoms
   examples: |
     - What are the symptoms

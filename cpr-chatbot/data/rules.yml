@@ -20,3 +20,29 @@ rules:
   steps:
   - intent: thank_you
   - action: utter_thank_back
+
+# Nouvelles règles pour les urgences critiques
+- rule: Immediate help for choking
+  steps:
+  - intent: choking_help
+  - action: utter_choking_help
+
+- rule: Immediate help for severe bleeding
+  steps:
+  - intent: bleeding_control
+  - action: utter_bleeding_control
+
+- rule: Immediate help for allergic reaction
+  steps:
+  - intent: allergic_reaction
+  - action: utter_allergic_reaction
+
+- rule: Immediate help for stroke
+  steps:
+  - intent: stroke_recognition
+  - action: utter_stroke_recognition
+
+- rule: Help manage panic in emergency
+  steps:
+  - intent: panic_management
+  - action: utter_panic_management
