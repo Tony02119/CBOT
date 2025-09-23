@@ -71,7 +71,7 @@ const Chatbot = () => {
 			console.error('Erreur lors de l\'envoi du message:', error);
 			setChatMessages(prevMessages => [...prevMessages, { 
 				sender: "System", 
-				text: "Désolé, je rencontre un problème de connexion. Veuillez réessayer." 
+				text: "Sorry, I'm experiencing a connection problem. Please try again." 
 			}]);
 		} finally {
 			setIsLoading(false);
@@ -123,15 +123,15 @@ const Chatbot = () => {
 			{showAnalyticsPopup && (
 				<div className='popup'>
 					<div className='popup-content'>
-						<h3>🔒 Confidentialité</h3>
+						<h3>🔒 Privacy</h3>
 						<p>
-							Acceptez-vous que nous conservions votre conversation avec le chatbot dans notre base de données 
-							à des fins purement analytiques et pour améliorer les réponses du chatbot ? 
-							Les conversations sont complètement anonymes et ne peuvent être liées à vous d'aucune manière.
+							Do you accept that we keep your conversation with the chatbot in our database 
+							for purely analytical purposes and to improve the chatbot's responses? 
+							Conversations are completely anonymous and cannot be linked to you in any way.
 						</p>
 						<div className="popup-buttons">
-							<button onClick={() => handlePopupResponse(true)}>Oui</button>
-							<button onClick={() => handlePopupResponse(false)}>Non</button>
+							<button onClick={() => handlePopupResponse(true)}>Yes</button>
+							<button onClick={() => handlePopupResponse(false)}>No</button>
 						</div>
 					</div>
 				</div>
@@ -140,11 +140,11 @@ const Chatbot = () => {
 			<div className='chatroom-wrapper'>
 				<div className='chatroom-header'>
 					<h3>
-						🏥 Assistant CPR
+						🏥 CPR Assistant
 					</h3>
 					<div className={`status ${isConnected ? 'connected' : 'disconnected'}`}>
 						<span className="status-dot"></span>
-						{isConnected ? 'En ligne' : 'Hors ligne'}
+						{isConnected ? 'Online' : 'Offline'}
 					</div>
 				</div>
 
@@ -152,27 +152,27 @@ const Chatbot = () => {
 					{chatMessages.length === 0 && !isLoading && (
 						<div className="welcome-message">
 							<div className="welcome-icon">🏥</div>
-							<h4>Bienvenue sur l'Assistant CPR !</h4>
-							<p>Je peux vous aider à apprendre :</p>
+							<h4>Welcome to CPR Assistant!</h4>
+							<p>I can help you learn about:</p>
 							<div className="welcome-features">
 								<div className="feature-item">
 									<span className="feature-icon">❤️</span>
-									<span>Procédures de RCP et techniques</span>
+									<span>CPR procedures and techniques</span>
 								</div>
 								<div className="feature-item">
 									<span className="feature-icon">⚠️</span>
-									<span>Symptômes d'arrêt cardiaque</span>
+									<span>Cardiac arrest symptoms</span>
 								</div>
 								<div className="feature-item">
 									<span className="feature-icon">📞</span>
-									<span>Numéros d'urgence</span>
+									<span>Emergency contact numbers</span>
 								</div>
 								<div className="feature-item">
 									<span className="feature-icon">⚡</span>
-									<span>Utilisation du défibrillateur (DEA)</span>
+									<span>AED (defibrillator) usage</span>
 								</div>
 							</div>
-							<p><strong>Posez-moi vos questions sur la RCP et les procédures d'urgence !</strong></p>
+							<p><strong>Ask me anything about CPR and emergency procedures!</strong></p>
 						</div>
 					)}
 
@@ -224,7 +224,7 @@ const Chatbot = () => {
 						value={message}
 						onChange={(e) => setMessage(e.target.value)}
 						onKeyDown={handleKeyPress}
-						placeholder="Posez votre question sur la RCP..."
+						placeholder="Ask your question about CPR..."
 						disabled={isLoading || !isConnected}
 						rows="1"
 					/>
